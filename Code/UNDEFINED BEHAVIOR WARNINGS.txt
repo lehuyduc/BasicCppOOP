@@ -1,0 +1,36 @@
+NEVER EVER WRITE A = B = C, IT'S UNDEFINED BEHAVIOR
+
+--- https://www.nayuki.io/page/undefined-behavior-in-c-and-cplusplus-programs
+
+Examples of undefined behavior
+Reading an uninitialized local variable is usually UB:
+
+int x;
+printf("%d", x);  // UB happens here
+Arithmetic overflow in a signed integer type is always UB:
+
+int x = INT_MAX;
+x++;  // Boom! (usually silent)
+Dereferencing a null pointer is UB:
+
+int *p = NULL;
+*p = 123;  // Kaboom
+Reading/writing an index past the end of an array is UB:
+
+char a[10];
+printf("%d", a[10]);  // Bang
+a[-1] = 7;  // Oww!
+Shifting more than the integer width or less than zero is UB:
+
+uint32_t x = 0;
+x = x << 33;  // Blamo
+x = x >> (-1);  // Kapow
+Computing an out-of-bounds pointer is UB, even without dereferencing it:
+
+short a[10];
+short *p = &a[15];  // Bleep
+Comparing pointers from unrelated objects is UB in C:
+
+long *p = malloc(size(long));
+long *q = malloc(size(long));
+if (p > q) ...  // Ouch

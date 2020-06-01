@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta http-equiv="x-ua-compatible" content="IE=EDGE">
+  <title>Constructor and destructor calling [Polymorphism in C++ language]</title>
+  <meta charset="UTF-8">
+  <meta name="generator" content="SCENARI 4.2.106 / Opale 3.7.000">
+  <meta name="revision" content="2018-11-26 07:03">
+  <link rel="start" href="polymorphism.html" title="Polymorphism in C++ language">
+  <meta name="author" content="Emmanuelle Darles ">
+  <meta name="keywords" content>
+  <meta name="date" content>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="../lib-md/w_scImgMgr/scImgMgr.css">
+  <link rel="stylesheet" type="text/css" href="../lib-md/w_scCodeMgr/scCodeMgr.css">
+  <script type="text/JavaScript">
+/*0*/ var scServices = {id:"joxyuesn"};
+/*1*/ window.scLoadParams = {destUri:"/co/polymorphism_10.html", pathToRoot:"../"};
+</script>
+  <script type="text/JavaScript" src="../lib-sc/scCoLib.js"></script>
+  <script type="text/JavaScript" src="../lib-sc/scSiLib.js"></script>
+  <script type="text/JavaScript" src="../lib-sc/scTiLib.js"></script>
+  <script type="text/JavaScript" src="../lib-sc/scPaLib.js"></script>
+  <script type="text/JavaScript" src="../lib-sc/scMapMgr.js"></script>
+  <script type="text/JavaScript" src="../lib-sc/scTooltipMgr.js"></script>
+  <script type="text/JavaScript" src="../lib-sc/scDynUiMgr.js"></script>
+  <script type="text/JavaScript" src="../lib-md/s_assmnt.js"></script>
+  <script type="text/JavaScript" src="../lib-sc/scDragMgr.js"></script>
+  <script type="text/JavaScript" src="../lib-sc/scAssmntMgr.js"></script>
+  <script type="text/JavaScript" src="../lib-md/w_mathjax/mathjaxMgr.js"></script>
+  <script type="text/JavaScript" src="../lib-md/s_scSearch/scSearch.js"></script>
+  <script type="text/JavaScript" src="../lib-md/w_tplMgr/tplMgr.js"></script>
+  <script type="text/JavaScript" src="../lib-md/w_scCodeMgr/scCodeMgr.js"></script>
+  <script type="text/JavaScript" src="../lib-md/w_searchMgr/searchMgr.js"></script>
+  <script type="text/JavaScript" src="../lib-md/w_scMediaMgr/scMediaMgr.js"></script>
+  <script type="text/JavaScript" src="../lib-md/w_scImgMgr/scImgMgr.js"></script>
+  <script type="text/JavaScript" src="../lib-md/w_outMgr/outMgr.js"></script>
+  <script type="text/JavaScript">
+
+/*0*/ try{if(window.opener && window.opener.scServices && window.opener.scServices.id == scServices.id) scServices = window.opener.scServices; else if(window.parent && window.parent.scServices && window.parent.scServices.id == scServices.id) scServices = window.parent.scServices;}catch(e){}
+scCodeMgr.registerCode("des:div.code");
+
+scImgMgr.registerAdaptedImage("ide:content/des:img");
+
+scImgMgr.registerGallery("des:div.galFra");
+
+scImgMgr.registerSvg("des:svg");
+scImgMgr.registerZoom("des:a.svgZoom",{type:"svg",svgMax:1,toolbar:1,titlePath:"par:/nsi:/des:span.capTi"});
+
+scImgMgr.registerZoom("des:a.imgZoom",{toolbar:1,mag:1,titlePath:"par:/nsi:/des:span.capTi"});
+
+</script>
+  <link type="text/css" rel="stylesheet" href="../skin/css/main.css" media="all">
+  <link type="text/css" rel="stylesheet" href="../skin/css/skin.css" media="all">
+  <link type="text/css" rel="stylesheet" href="../skin/css/print.css" media="print">
+  <script type="text/JavaScript">
+outMgr.declareOutline("polymorphism.txt");
+	</script> </head>
+ <body class="default module expUc">
+  <div id="root"><header id="header" role="banner"><h1><span>Polymorphism in C++ language</span></h1><nav role="navigation"><ul id="accessibility"><li class="waiContent"><a href="#content"><span>content</span></a></li><li class="waiMenu"><a href="#menu"><span>menu</span></a></li><li class="waiNav"><a href="#navigation"><span>navigation</span></a></li><li class="waiTools"><a href="#tools"><span>tools</span></a></li></ul></nav></header><main id="main" role="main"><div id="document"><div id="content" tabindex="-1"><div class="scroller"><hr class="hidden"><section class="hBk article expUc"><h2 class="hBk_ti"><span>Constructor and destructor calling</span></h2><div class="hBk_co "><div class="iBk info"><h3 class="iBk_ti"><span>Constructor calling</span></h3><div class="iBk_co "><div class="rBk "><p>The super-class constructor is called in first.</p><p>Sub-class constructor is called secondly.</p></div></div></div><div class="example pBk"><h3 class="example_ti pBk_ti"><span><i class="type"><span>Example</span></i><span class="hidden"> : </span><span class="title"></span></span></h3><div class="example_co pBk_co"><div class="rBk listing"><div><div class="code"><div class="code-form "><div class="CodeMirror-static cm-s-default" data-lang="text/x-c++src"><div class="CodeMirror-code"><div class="CodeMirror-line"><div class="CodeMirror-linenumber">1</div><pre><span class="cm-meta">#include &quot;point2D.hpp&quot;</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">2</div><pre><span class="cm-meta">#include &quot;circle.hpp&quot;</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">3</div><pre><span class="cm-meta">#include &lt;iostream&gt;</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">4</div><pre></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">5</div><pre><span class="cm-variable-3">int</span> <span class="cm-def">main</span>()</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">6</div><pre>{</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">7</div><pre>    <span class="cm-variable">Circle</span> <span class="cm-variable">c</span>(<span class="cm-variable">Point2D</span>(<span class="cm-number">0</span>,<span class="cm-number">0</span>),<span class="cm-number">1.0</span>);</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">8</div><pre>    <span class="cm-variable">c</span>.<span class="cm-variable">display</span>();</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">9</div><pre>}</pre></div></div></div></div><pre class="code-raw noIndex " style="display:none;">#include &quot;point2D.hpp&quot;
+#include &quot;circle.hpp&quot;
+#include &lt;iostream&gt;
+
+int main()
+{
+    Circle c(Point2D(0,0),1.0);
+    c.display();
+}</pre></div></div></div><div class="rBk "><ul class="txt_il "><li class="txt_ili "><p>The constructor of the class Form is called.</p></li><li class="txt_ili "><p>Then, the constructor of the class Circle is called.</p></li></ul></div></div></div><div class="iBk info"><h3 class="iBk_ti"><span>Destructor calling</span></h3><div class="iBk_co "><div class="rBk "><p>The destructor of the sub-class is called in first.</p><p>The destructor of the super-class is called secondly.</p></div></div></div></div></section></div></div><div id="navigation" tabindex="-1"><hr class="hidden"><nav class="pageTurner" role="navigation"><ul><li><a rel="prev" href="polymorphism_9.html" target="_self" class="btnNav prev" title="Previous (Inheritance concept)"><span>Previous</span></a></li><li><a rel="next" href="polymorphism_11.html" target="_self" class="btnNav next" title="Next (Multiple inheritance)"><span>Next</span></a></li></ul></nav></div></div><div id="toolbox"><nav id="menu" class="pageSelector" role="navigation" tabindex="-1" aria-label="main menu"><hr class="hidden"><ul class="mnu static" data-totalPages="16"><li class="sel_no anc_no type_l  dpt_0 obj"><div class="lbl type_l" id="polymorphism_1.html"><a href="polymorphism_1.html" target="_self" class="item"><span>Objectives</span></a></div></li><li class="sel_no anc_no type_b  type_b_c dpt_0 ueDiv"><div class="lbl type_b" id="polymorphism_2.html"><a href="polymorphism_2.html" target="_self" class="item"><span>Class and object&nbsp;: Reminders</span></a></div></li><li class="sel_no anc_yes type_b  dpt_0 ueDiv"><div class="lbl type_b" id="polymorphism_3.html"><a href="polymorphism_3.html" target="_self" class="item" type="up"><span>Inheritance in C++</span></a></div><ul class="sub mnu_open"><li class="sel_no anc_no type_l  dpt_1 expUc"><div class="lbl type_l" id="polymorphism_9.html"><a href="polymorphism_9.html" target="_self" class="item"><span>Inheritance concept</span></a></div></li><li class="sel_yes anc_no type_l  dpt_1 expUc"><div class="lbl type_l" id="polymorphism_10.html"><span class="item"><span>Constructor and destructor calling</span></span></div></li><li class="sel_no anc_no type_l  dpt_1 expUc"><div class="lbl type_l" id="polymorphism_11.html"><a href="polymorphism_11.html" target="_self" class="item"><span>Multiple inheritance</span></a></div></li><li class="sel_no anc_no type_l  dpt_1 expUc"><div class="lbl type_l" id="polymorphism_12.html"><a href="polymorphism_12.html" target="_self" class="item"><span>Upcasting and Downcasting</span></a></div></li></ul></li><li class="sel_no anc_no type_b  type_b_c dpt_0 ueDiv"><div class="lbl type_b" id="polymorphism_4.html"><a href="polymorphism_4.html" target="_self" class="item"><span>Polymorphism in C++</span></a></div></li><li class="sel_no anc_no type_l  dpt_0 practUc"><div class="lbl type_l" id="polymorphism_5.html"><a href="polymorphism_5.html" target="_self" class="item"><span>Quiz: The class Square</span></a></div></li><li class="sel_no anc_no type_l  dpt_0 practUc"><div class="lbl type_l" id="polymorphism_6.html"><a href="polymorphism_6.html" target="_self" class="item"><span>Quiz: Crazy robots</span></a></div></li></ul></nav><div id="tools" tabindex="-1"><hr class="hidden"><nav class="headingSelector" role="navigation"><ul class="mnu"><li class="anc_no home" data-position="uncle"><div class="lbl"><a href="polymorphism.html" target="_self" class="item" type="index" title="Module homepage"><span>Homepage</span></a></div></li><li class="anc_yes module" data-position="ancestor"><div class="lbl"><span class="item"><span>Module</span></span></div></li><li class="anc_no tools" data-position="uncle"><div class="lbl"><a href="plan.html" target="_self" class="item" title="Module transversal tools"><span>Tools</span></a></div></li></ul></nav></div></div></main><footer id="footer" role="contentinfo" tabindex="-1"><hr class="hidden"><a id="linkSp" target="_blank" href="https://www.scenari.org" title="Created with Scenari (new window)"><span><img alt="Created with Scenari (new window)" src="../skin/img/tpl/scBtn.png"></span></a></footer></div>
+  <script type="text/JavaScript" src="../skin/js/skin.js"></script>
+  <script type="text/javascript">tplMgr.init();scCodeMgr.init();scMediaMgr.init("ide:content/chi:div/chi:section/des:.mediaPlayer",{processYoutubeUrls :true});scImgMgr.init();outMgr.init();</script>
+ </body>
+</html>

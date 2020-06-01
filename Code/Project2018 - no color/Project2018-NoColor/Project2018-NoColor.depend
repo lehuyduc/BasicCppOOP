@@ -1,0 +1,143 @@
+# depslib dependency file v1.0
+1574858291 source:e:\master1\slide_usth\mi1.03 - oop\code\project2018 - no color\project2018-nocolor\crazyrobot.cpp
+	<iostream>
+	"CrazyRobot.hpp"
+	<random>
+
+1574737169 e:\master1\slide_usth\mi1.03 - oop\code\project2018 - no color\project2018-nocolor\crazyrobot.hpp
+	<iostream>
+	"Point.hpp"
+	"Robot.hpp"
+
+1574757203 e:\master1\slide_usth\mi1.03 - oop\code\project2018 - no color\project2018-nocolor\point.hpp
+	<iostream>
+	<ostream>
+
+1574858273 e:\master1\slide_usth\mi1.03 - oop\code\project2018 - no color\project2018-nocolor\robot.hpp
+	<iostream>
+	<vector>
+	"Point.hpp"
+	"Maze.hpp"
+
+1574858250 e:\master1\slide_usth\mi1.03 - oop\code\project2018 - no color\project2018-nocolor\maze.hpp
+	<iostream>
+	<vector>
+	"Robot.hpp"
+	"Point.hpp"
+
+1574858321 source:e:\master1\slide_usth\mi1.03 - oop\code\project2018 - no color\project2018-nocolor\downrobot.cpp
+	<iostream>
+	"DownRobot.hpp"
+
+1574737185 e:\master1\slide_usth\mi1.03 - oop\code\project2018 - no color\project2018-nocolor\downrobot.hpp
+	<iostream>
+	"Robot.hpp"
+
+1574858326 source:e:\master1\slide_usth\mi1.03 - oop\code\project2018 - no color\project2018-nocolor\jumpingrobot.cpp
+	<iostream>
+	"JumpingRobot.hpp"
+
+1574737192 e:\master1\slide_usth\mi1.03 - oop\code\project2018 - no color\project2018-nocolor\jumpingrobot.hpp
+	<iostream>
+	"Robot.hpp"
+
+1574858334 source:e:\master1\slide_usth\mi1.03 - oop\code\project2018 - no color\project2018-nocolor\leftrobot.cpp
+	<iostream>
+	"LeftRobot.hpp"
+
+1574737196 e:\master1\slide_usth\mi1.03 - oop\code\project2018 - no color\project2018-nocolor\leftrobot.hpp
+	<iostream>
+	"Robot.hpp"
+
+1574770354 source:e:\master1\slide_usth\mi1.03 - oop\code\project2018 - no color\project2018-nocolor\main.cpp
+	<iostream>
+	<time.h>
+	"CrazyRobot.hpp"
+	"DownRobot.hpp"
+	"JumpingRobot.hpp"
+	"LeftRobot.hpp"
+	"RightRobot.hpp"
+	"SmartRobot.hpp"
+	"UpRobot.hpp"
+	"VerySmartRobot.hpp"
+	"SuperSmartRobot.hpp"
+	"RandomMaze.hpp"
+
+1574737200 e:\master1\slide_usth\mi1.03 - oop\code\project2018 - no color\project2018-nocolor\rightrobot.hpp
+	<iostream>
+	"Robot.hpp"
+
+1574767879 e:\master1\slide_usth\mi1.03 - oop\code\project2018 - no color\project2018-nocolor\smartrobot.hpp
+	<iostream>
+	"Point.hpp"
+	"Robot.hpp"
+
+1574737207 e:\master1\slide_usth\mi1.03 - oop\code\project2018 - no color\project2018-nocolor\uprobot.hpp
+	<iostream>
+	"Robot.hpp"
+
+1574769055 e:\master1\slide_usth\mi1.03 - oop\code\project2018 - no color\project2018-nocolor\verysmartrobot.hpp
+	<iostream>
+	"Point.hpp"
+	"Robot.hpp"
+	<queue>
+
+1574770381 e:\master1\slide_usth\mi1.03 - oop\code\project2018 - no color\project2018-nocolor\supersmartrobot.hpp
+	<iostream>
+	"Point.hpp"
+	"Robot.hpp"
+	<queue>
+
+1574697486 e:\master1\slide_usth\mi1.03 - oop\code\project2018 - no color\project2018-nocolor\randommaze.hpp
+	<iostream>
+	<vector>
+	"Random.hpp"
+	"Maze.hpp"
+
+1574698048 e:\master1\slide_usth\mi1.03 - oop\code\project2018 - no color\project2018-nocolor\random.hpp
+	<iostream>
+
+1574757219 source:e:\master1\slide_usth\mi1.03 - oop\code\project2018 - no color\project2018-nocolor\point.cpp
+	<iostream>
+	"Point.hpp"
+
+1574765302 source:e:\master1\slide_usth\mi1.03 - oop\code\project2018 - no color\project2018-nocolor\random.cpp
+	"Random.hpp"
+
+1574698313 source:e:\master1\slide_usth\mi1.03 - oop\code\project2018 - no color\project2018-nocolor\randommaze.cpp
+	<iostream>
+	"RandomMaze.hpp"
+
+1574858410 source:e:\master1\slide_usth\mi1.03 - oop\code\project2018 - no color\project2018-nocolor\rightrobot.cpp
+	<iostream>
+	"RightRobot.hpp"
+
+1574857354 source:e:\master1\slide_usth\mi1.03 - oop\code\project2018 - no color\project2018-nocolor\robot.cpp
+	<iostream>
+	<vector>
+	"Robot.hpp"
+
+1574858422 source:e:\master1\slide_usth\mi1.03 - oop\code\project2018 - no color\project2018-nocolor\smartrobot.cpp
+	<iostream>
+	"SmartRobot.hpp"
+	<random>
+
+1574858429 source:e:\master1\slide_usth\mi1.03 - oop\code\project2018 - no color\project2018-nocolor\supersmartrobot.cpp
+	<iostream>
+	"SuperSmartRobot.hpp"
+	<random>
+
+1574858433 source:e:\master1\slide_usth\mi1.03 - oop\code\project2018 - no color\project2018-nocolor\uprobot.cpp
+	<iostream>
+	"UpRobot.hpp"
+
+1574858441 source:e:\master1\slide_usth\mi1.03 - oop\code\project2018 - no color\project2018-nocolor\verysmartrobot.cpp
+	<iostream>
+	"VerySmartRobot.hpp"
+	<random>
+	<queue>
+
+1574858386 source:e:\master1\slide_usth\mi1.03 - oop\code\project2018 - no color\project2018-nocolor\maze.cpp
+	<iostream>
+	"Maze.hpp"
+

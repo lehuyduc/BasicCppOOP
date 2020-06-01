@@ -1,0 +1,29 @@
+# depslib dependency file v1.0
+1574170221 source:e:\master1\slide_usth\mi1.03 - oop\code\labwork2\students\exercise4\exercise4project\exercise4.cpp
+	<iostream>
+	"exercise4.h"
+
+1574172179 e:\master1\slide_usth\mi1.03 - oop\code\labwork2\students\exercise4\exercise4project\exercise4.h
+
+1574171308 source:e:\master1\slide_usth\mi1.03 - oop\code\labwork2\students\exercise4\exercise4project\exercise4.c
+	<math.h>
+	"exercise4.h"
+
+1574171308 source:e:\master1\slide_usth\mi1.03 - oop\code\labwork2\students\exercise4\exercise4project\exercise4_c.c
+	<math.h>
+	"exercise4.h"
+
+1574170221 source:e:\master1\slide_usth\mi1.03 - oop\code\labwork2\students\exercise4\exercise4project\exercise4_cpp.cpp
+	<iostream>
+	"exercise4.h"
+
+1574171308 source:e:\master1\slide_usth\mi1.03 - oop\code\labwork2\exercise4\exercise4project\exercise4_c.c
+	<math.h>
+	"exercise4.h"
+
+1574172179 e:\master1\slide_usth\mi1.03 - oop\code\labwork2\exercise4\exercise4project\exercise4.h
+
+1574170221 source:e:\master1\slide_usth\mi1.03 - oop\code\labwork2\exercise4\exercise4project\exercise4_cpp.cpp
+	<iostream>
+	"exercise4.h"
+

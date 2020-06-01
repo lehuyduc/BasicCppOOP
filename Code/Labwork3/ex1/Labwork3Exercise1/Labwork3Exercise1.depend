@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1574237705 source:e:\master1\slide_usth\mi1.03 - oop\code\labwork3\ex1\exercise1.cpp
+	<iostream>
+	"Image.h"
+
+1574169703 e:\master1\slide_usth\mi1.03 - oop\code\labwork3\ex1\image.h
+	<iostream>
+
+1574237007 source:e:\master1\slide_usth\mi1.03 - oop\code\labwork3\ex1\image.cpp
+	<iostream>
+	<fstream>
+	"Image.h"
+

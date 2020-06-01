@@ -1,0 +1,3 @@
+
+ex4
+https://arne-mertz.de/2018/10/calling-cpp-code-from-c-with-extern-c/

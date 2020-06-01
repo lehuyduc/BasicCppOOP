@@ -1,0 +1,21 @@
+# depslib dependency file v1.0
+1574428377 source:e:\master1\slide_usth\mi1.03 - oop\code\labwork4\labwork4\ex2\main.cpp
+	<iostream>
+	"Vector.hpp"
+	"Matrix.hpp"
+
+1574343785 e:\master1\slide_usth\mi1.03 - oop\code\labwork4\labwork4\ex2\vector.hpp
+	<iostream>
+	"Matrix.hpp"
+
+1576302053 e:\master1\slide_usth\mi1.03 - oop\code\labwork4\labwork4\ex2\matrix.hpp
+	<iostream>
+
+1574739356 source:e:\master1\slide_usth\mi1.03 - oop\code\labwork4\labwork4\ex2\vector.cpp
+	"Vector.hpp"
+
+1574344234 source:e:\master1\slide_usth\mi1.03 - oop\code\labwork4\labwork4\ex2\matrix.cpp
+	"Matrix.hpp"
+	"Vector.hpp"
+	<iostream>
+

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta http-equiv="x-ua-compatible" content="IE=EDGE">
+  <title>Inheritance concept [Polymorphism in C++ language]</title>
+  <meta charset="UTF-8">
+  <meta name="generator" content="SCENARI 4.2.106 / Opale 3.7.000">
+  <meta name="revision" content="2018-11-26 07:03">
+  <link rel="start" href="polymorphism.html" title="Polymorphism in C++ language">
+  <meta name="author" content="Emmanuelle Darles ">
+  <meta name="keywords" content>
+  <meta name="date" content>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="../lib-md/w_scImgMgr/scImgMgr.css">
+  <link rel="stylesheet" type="text/css" href="../lib-md/w_scCodeMgr/scCodeMgr.css">
+  <script type="text/JavaScript">
+/*0*/ var scServices = {id:"joxyuesn"};
+/*1*/ window.scLoadParams = {destUri:"/co/polymorphism_9.html", pathToRoot:"../"};
+</script>
+  <script type="text/JavaScript" src="../lib-sc/scCoLib.js"></script>
+  <script type="text/JavaScript" src="../lib-sc/scSiLib.js"></script>
+  <script type="text/JavaScript" src="../lib-sc/scTiLib.js"></script>
+  <script type="text/JavaScript" src="../lib-sc/scPaLib.js"></script>
+  <script type="text/JavaScript" src="../lib-sc/scMapMgr.js"></script>
+  <script type="text/JavaScript" src="../lib-sc/scTooltipMgr.js"></script>
+  <script type="text/JavaScript" src="../lib-sc/scDynUiMgr.js"></script>
+  <script type="text/JavaScript" src="../lib-md/s_assmnt.js"></script>
+  <script type="text/JavaScript" src="../lib-sc/scDragMgr.js"></script>
+  <script type="text/JavaScript" src="../lib-sc/scAssmntMgr.js"></script>
+  <script type="text/JavaScript" src="../lib-md/w_mathjax/mathjaxMgr.js"></script>
+  <script type="text/JavaScript" src="../lib-md/s_scSearch/scSearch.js"></script>
+  <script type="text/JavaScript" src="../lib-md/w_tplMgr/tplMgr.js"></script>
+  <script type="text/JavaScript" src="../lib-md/w_scCodeMgr/scCodeMgr.js"></script>
+  <script type="text/JavaScript" src="../lib-md/w_searchMgr/searchMgr.js"></script>
+  <script type="text/JavaScript" src="../lib-md/w_scMediaMgr/scMediaMgr.js"></script>
+  <script type="text/JavaScript" src="../lib-md/w_scImgMgr/scImgMgr.js"></script>
+  <script type="text/JavaScript" src="../lib-md/w_outMgr/outMgr.js"></script>
+  <script type="text/JavaScript">
+
+/*0*/ try{if(window.opener && window.opener.scServices && window.opener.scServices.id == scServices.id) scServices = window.opener.scServices; else if(window.parent && window.parent.scServices && window.parent.scServices.id == scServices.id) scServices = window.parent.scServices;}catch(e){}
+scCodeMgr.registerCode("des:div.code");
+
+scImgMgr.registerAdaptedImage("ide:content/des:img");
+
+scImgMgr.registerGallery("des:div.galFra");
+
+scImgMgr.registerSvg("des:svg");
+scImgMgr.registerZoom("des:a.svgZoom",{type:"svg",svgMax:1,toolbar:1,titlePath:"par:/nsi:/des:span.capTi"});
+
+scImgMgr.registerZoom("des:a.imgZoom",{toolbar:1,mag:1,titlePath:"par:/nsi:/des:span.capTi"});
+
+</script>
+  <link type="text/css" rel="stylesheet" href="../skin/css/main.css" media="all">
+  <link type="text/css" rel="stylesheet" href="../skin/css/skin.css" media="all">
+  <link type="text/css" rel="stylesheet" href="../skin/css/print.css" media="print">
+  <script type="text/JavaScript">
+outMgr.declareOutline("polymorphism.txt");
+	</script> </head>
+ <body class="default module expUc">
+  <div id="root"><header id="header" role="banner"><h1><span>Polymorphism in C++ language</span></h1><nav role="navigation"><ul id="accessibility"><li class="waiContent"><a href="#content"><span>content</span></a></li><li class="waiMenu"><a href="#menu"><span>menu</span></a></li><li class="waiNav"><a href="#navigation"><span>navigation</span></a></li><li class="waiTools"><a href="#tools"><span>tools</span></a></li></ul></nav></header><main id="main" role="main"><div id="document"><div id="content" tabindex="-1"><div class="scroller"><hr class="hidden"><section class="hBk article expUc"><h2 class="hBk_ti"><span>Inheritance concept</span></h2><div class="hBk_co "><div class="def pBk"><h3 class="def_ti pBk_ti"><span><i class="type"><span>Definition</span></i><span class="hidden"> : </span><span class="title">Inheritance</span></span></h3><div class="def_co pBk_co"><div class="rBk "><p>The inheritance allow to&nbsp;:</p><ul class="txt_il "><li class="txt_ili "><p>code reuse</p></li><li class="txt_ili "><p>add news fonctionnalities in an existing code</p></li><li class="txt_ili "><p>modify an existing comportement by writting new definition of a method of a super class in a sub-class (<i class="txt_spec_is ">overriding</i>).</p></li></ul><p>The inheritance allow to add some properties of an existing class to create a more precise class</p><p>The idea&nbsp;: a class B is a class A with more things</p></div></div></div><div class="example pBk"><h3 class="example_ti pBk_ti"><span><i class="type"><span>Example</span></i><span class="hidden"> : </span><span class="title">Classes Form and Circle</span></span></h3><div class="example_co pBk_co"><div class="rBk res"><figure role="group" class="resInFlow png"><div class="resInFlow_co "><img src="../res/circle.png" width="151" height="296" alt></div></figure></div><div class="rBk listing"><div><div class="code"><div class="code-form "><div class="CodeMirror-static cm-s-default" data-lang="text/x-c++src"><div class="CodeMirror-code"><div class="CodeMirror-line"><div class="CodeMirror-linenumber">1</div><pre><span class="cm-meta">#ifndef FORM_</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">2</div><pre><span class="cm-meta">#define FORM_</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">3</div><pre></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">4</div><pre><span class="cm-keyword">class</span> <span class="cm-def">Form</span> </pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">5</div><pre>{</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">6</div><pre>   <span class="cm-keyword">public</span> :</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">7</div><pre></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">8</div><pre>     <span class="cm-comment">// Constructors</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">9</div><pre>     <span class="cm-variable">Form</span>();</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">10</div><pre></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">11</div><pre>     <span class="cm-comment">// Destructor</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">12</div><pre>     <span class="cm-variable">~Form</span>();</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">13</div><pre></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">14</div><pre>     <span class="cm-variable-3">void</span> <span class="cm-variable">display</span>();</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">15</div><pre>};</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">16</div><pre><span class="cm-meta">#endif</span></pre></div></div></div></div><pre class="code-raw noIndex " style="display:none;">#ifndef FORM_
+#define FORM_
+
+class Form 
+{
+   public :
+
+     // Constructors
+     Form();
+
+     // Destructor
+     ~Form();
+
+     void display();
+};
+#endif</pre></div></div></div><div class="rBk listing"><div><div class="code"><div class="code-form "><div class="CodeMirror-static cm-s-default" data-lang="text/x-c++src"><div class="CodeMirror-code"><div class="CodeMirror-line"><div class="CodeMirror-linenumber">1</div><pre><span class="cm-meta">#include &quot;form.hpp&quot;</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">2</div><pre><span class="cm-meta">#include &lt;iostream&gt;</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">3</div><pre></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">4</div><pre><span class="cm-def">Form::Form</span>()</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">5</div><pre>{</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">6</div><pre>}</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">7</div><pre><span class="cm-variable">Form::</span><span class="cm-def">~Form</span>()</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">8</div><pre>{</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">9</div><pre>}</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">10</div><pre><span class="cm-variable-3">void</span> <span class="cm-def">Form::display</span>()</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">11</div><pre>{</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">12</div><pre>   <span class="cm-variable">std::cout</span> <span class="cm-operator">&lt;&lt;</span> <span class="cm-string">&quot;I'm a form !&quot;</span> <span class="cm-operator">&lt;&lt;</span> <span class="cm-variable">std::endl</span>;</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">13</div><pre>}</pre></div></div></div></div><pre class="code-raw noIndex " style="display:none;">#include &quot;form.hpp&quot;
+#include &lt;iostream&gt;
+
+Form::Form()
+{
+}
+Form::~Form()
+{
+}
+void Form::display()
+{
+   std::cout &lt;&lt; &quot;I'm a form !&quot; &lt;&lt; std::endl;
+}</pre></div></div></div><div class="rBk listing"><div><div class="code"><div class="code-form "><div class="CodeMirror-static cm-s-default" data-lang="text/x-c++src"><div class="CodeMirror-code"><div class="CodeMirror-line"><div class="CodeMirror-linenumber">1</div><pre><span class="cm-meta">#ifndef CIRCLE_</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">2</div><pre><span class="cm-meta">#define CIRCLE_</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">3</div><pre></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">4</div><pre><span class="cm-meta">#include &quot;form.hpp&quot;</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">5</div><pre><span class="cm-meta">#include &quot;point2D.hpp&quot;</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">6</div><pre></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">7</div><pre><span class="cm-keyword">class</span> <span class="cm-def">Circle</span> : <span class="cm-keyword">public</span> <span class="cm-variable">Form</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">8</div><pre>{</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">9</div><pre>   <span class="cm-keyword">public</span> : </pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">10</div><pre>      <span class="cm-variable">Circle</span>(<span class="cm-variable">Point2D</span> <span class="cm-variable">center</span>, <span class="cm-variable-3">float</span> <span class="cm-variable">radius</span>);</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">11</div><pre>      <span class="cm-variable">~Circle</span>();</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">12</div><pre></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">13</div><pre>      <span class="cm-comment">//Getters</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">14</div><pre>      <span class="cm-variable">Point2D</span> <span class="cm-variable">getCenter</span>();</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">15</div><pre>      <span class="cm-variable-3">float</span>   <span class="cm-variable">getRadius</span>();</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">16</div><pre></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">17</div><pre>      <span class="cm-comment">//Setters</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">18</div><pre>      <span class="cm-variable-3">void</span> <span class="cm-variable">setCenter</span>(<span class="cm-variable">Point2D</span> <span class="cm-variable">center</span>);</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">19</div><pre>      <span class="cm-variable-3">void</span> <span class="cm-variable">setRadius</span>(<span class="cm-variable-3">float</span> <span class="cm-variable">radius</span>);</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">20</div><pre></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">21</div><pre>      <span class="cm-comment">//Overriding method</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">22</div><pre>      <span class="cm-variable-3">void</span> <span class="cm-variable">display</span>();</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">23</div><pre></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">24</div><pre>    <span class="cm-keyword">private</span> : </pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">25</div><pre>        <span class="cm-variable">Point2D</span> <span class="cm-variable">center</span>;</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">26</div><pre>        <span class="cm-variable-3">float</span> <span class="cm-variable">radius</span>;</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">27</div><pre>};</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">28</div><pre><span class="cm-meta">#endif</span></pre></div></div></div></div><pre class="code-raw noIndex " style="display:none;">#ifndef CIRCLE_
+#define CIRCLE_
+
+#include &quot;form.hpp&quot;
+#include &quot;point2D.hpp&quot;
+
+class Circle : public Form
+{
+   public : 
+      Circle(Point2D center, float radius);
+      ~Circle();
+
+      //Getters
+      Point2D getCenter();
+      float   getRadius();
+
+      //Setters
+      void setCenter(Point2D center);
+      void setRadius(float radius);
+
+      //Overriding method
+      void display();
+
+    private : 
+        Point2D center;
+        float radius;
+};
+#endif</pre></div></div></div><div class="rBk listing"><div><div class="code"><div class="code-form "><div class="CodeMirror-static cm-s-default" data-lang="text/x-c++src"><div class="CodeMirror-code"><div class="CodeMirror-line"><div class="CodeMirror-linenumber">1</div><pre><span class="cm-meta">#include &quot;circle.hpp&quot;</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">2</div><pre><span class="cm-meta">#include &lt;iostream&gt;</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">3</div><pre></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">4</div><pre><span class="cm-def">Circle::Circle</span>(<span class="cm-variable">Point2D</span> <span class="cm-variable">center</span>, <span class="cm-variable-3">float</span> <span class="cm-variable">radius</span>) : <span class="cm-variable">Form</span>()</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">5</div><pre>{</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">6</div><pre>    <span class="cm-keyword">this</span><span class="cm-operator">-&gt;</span><span class="cm-variable">center</span> <span class="cm-operator">=</span> <span class="cm-variable">center</span>;</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">7</div><pre>    <span class="cm-keyword">this</span><span class="cm-operator">-&gt;</span><span class="cm-variable">radius</span> <span class="cm-operator">=</span> <span class="cm-variable">radius</span>;</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">8</div><pre>}</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">9</div><pre><span class="cm-variable">Circle::</span><span class="cm-def">~Circle</span>()</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">10</div><pre>{</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">11</div><pre>}</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">12</div><pre><span class="cm-variable">Point2D</span> <span class="cm-def">Circle::getCenter</span>()</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">13</div><pre>{</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">14</div><pre>    <span class="cm-keyword">return</span> <span class="cm-keyword">this</span><span class="cm-operator">-&gt;</span><span class="cm-variable">center</span>;</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">15</div><pre>}</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">16</div><pre><span class="cm-variable-3">float</span> <span class="cm-def">Circle::getRadius</span>()</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">17</div><pre>{</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">18</div><pre>    <span class="cm-keyword">return</span> <span class="cm-keyword">this</span><span class="cm-operator">-&gt;</span><span class="cm-variable">radius</span>;</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">19</div><pre>}</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">20</div><pre><span class="cm-variable-3">void</span> <span class="cm-def">Circle::setCenter</span>(<span class="cm-variable">Point2D</span> <span class="cm-variable">center</span>)</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">21</div><pre>{</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">22</div><pre>    <span class="cm-keyword">this</span><span class="cm-operator">-&gt;</span><span class="cm-variable">center</span> <span class="cm-operator">=</span> <span class="cm-variable">center</span>;</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">23</div><pre>}</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">24</div><pre><span class="cm-variable-3">void</span> <span class="cm-def">Circle::setRadius</span>(<span class="cm-variable-3">float</span> <span class="cm-variable">radius</span>)</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">25</div><pre>{</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">26</div><pre>    <span class="cm-keyword">this</span><span class="cm-operator">-&gt;</span><span class="cm-variable">radius</span> <span class="cm-operator">=</span> <span class="cm-variable">radius</span>;</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">27</div><pre>}</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">28</div><pre><span class="cm-variable-3">void</span> <span class="cm-def">Circle::display</span>()</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">29</div><pre>{</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">30</div><pre>   <span class="cm-variable">std::cout</span> <span class="cm-operator">&lt;&lt;</span> <span class="cm-string">&quot;I'm a circle !&quot;</span> <span class="cm-operator">&lt;&lt;</span> <span class="cm-variable">std::endl</span>;</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">31</div><pre>   <span class="cm-variable">std::cout</span> <span class="cm-operator">&lt;&lt;</span> <span class="cm-string">&quot;My center is &quot;</span>;</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">32</div><pre>   <span class="cm-keyword">this</span><span class="cm-operator">-&gt;</span><span class="cm-variable">center</span>.<span class="cm-variable">display</span>();</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">33</div><pre>   <span class="cm-variable">std::cout</span> <span class="cm-operator">&lt;&lt;</span> <span class="cm-string">&quot;My radius is &quot;</span> <span class="cm-operator">&lt;&lt;</span> <span class="cm-keyword">this</span><span class="cm-operator">-&gt;</span><span class="cm-variable">radius</span> <span class="cm-operator">&lt;&lt;</span> <span class="cm-variable">std::endl</span>;</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">34</div><pre>}</pre></div></div></div></div><pre class="code-raw noIndex " style="display:none;">#include &quot;circle.hpp&quot;
+#include &lt;iostream&gt;
+
+Circle::Circle(Point2D center, float radius) : Form()
+{
+    this-&gt;center = center;
+    this-&gt;radius = radius;
+}
+Circle::~Circle()
+{
+}
+Point2D Circle::getCenter()
+{
+    return this-&gt;center;
+}
+float Circle::getRadius()
+{
+    return this-&gt;radius;
+}
+void Circle::setCenter(Point2D center)
+{
+    this-&gt;center = center;
+}
+void Circle::setRadius(float radius)
+{
+    this-&gt;radius = radius;
+}
+void Circle::display()
+{
+   std::cout &lt;&lt; &quot;I'm a circle !&quot; &lt;&lt; std::endl;
+   std::cout &lt;&lt; &quot;My center is &quot;;
+   this-&gt;center.display();
+   std::cout &lt;&lt; &quot;My radius is &quot; &lt;&lt; this-&gt;radius &lt;&lt; std::endl;
+}</pre></div></div></div><div class="rBk listing"><div><div class="code"><div class="code-form "><div class="CodeMirror-static cm-s-default" data-lang="text/x-c++src"><div class="CodeMirror-code"><div class="CodeMirror-line"><div class="CodeMirror-linenumber">1</div><pre><span class="cm-meta">#include &quot;point2D.hpp&quot;</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">2</div><pre><span class="cm-meta">#include &quot;circle.hpp&quot;</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">3</div><pre></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">4</div><pre><span class="cm-variable-3">int</span> <span class="cm-def">main</span>()</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">5</div><pre>{</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">6</div><pre>    <span class="cm-comment">//Form creation</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">7</div><pre>    <span class="cm-variable">Form</span> <span class="cm-variable">f</span>;</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">8</div><pre>    <span class="cm-variable">f</span>.<span class="cm-variable">display</span>();</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">9</div><pre></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">10</div><pre>    <span class="cm-comment">//Circle creation</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">11</div><pre>    <span class="cm-variable">Circle</span> <span class="cm-variable">c</span>(<span class="cm-variable">Point2D</span>(<span class="cm-number">0</span>,<span class="cm-number">0</span>),<span class="cm-number">1.0</span>);</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">12</div><pre>    <span class="cm-variable">c</span>.<span class="cm-variable">display</span>();</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">13</div><pre>}</pre></div></div></div></div><pre class="code-raw noIndex " style="display:none;">#include &quot;point2D.hpp&quot;
+#include &quot;circle.hpp&quot;
+
+int main()
+{
+    //Form creation
+    Form f;
+    f.display();
+
+    //Circle creation
+    Circle c(Point2D(0,0),1.0);
+    c.display();
+}</pre></div></div></div><div class="rBk "><p><code class="txt_code_is ">Output&nbsp;:</code> </p></div><div class="rBk listing"><div><div class="code"><div class="code-form "><div class="CodeMirror-static cm-s-default" data-lang="text/x-c++src"><div class="CodeMirror-code"><div class="CodeMirror-line"><div class="CodeMirror-linenumber">1</div><pre><span class="cm-variable">I</span><span class="cm-string">'m a form !</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">2</div><pre><span class="cm-variable">I</span><span class="cm-string">'m a circle !</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">3</div><pre><span class="cm-variable">My</span> <span class="cm-variable">center</span> <span class="cm-variable">is</span> <span class="cm-variable">x</span> <span class="cm-operator">=</span> <span class="cm-number">0</span> <span class="cm-variable">y</span> <span class="cm-operator">=</span> <span class="cm-number">0</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">4</div><pre><span class="cm-variable">My</span> <span class="cm-variable">radius</span> <span class="cm-variable">is</span> <span class="cm-number">1</span></pre></div></div></div></div><pre class="code-raw noIndex " style="display:none;">I'm a form !
+I'm a circle !
+My center is x = 0 y = 0
+My radius is 1</pre></div></div></div></div></div><div class="iBk info"><div class="iBk_co "><div class="rBk "><p>An objet of type B can call all the method of the superclass A. If the method is override in the subclass B, it's possible to specify the method of the super-class with the&nbsp;:&nbsp;: operator</p></div><div class="rBk listing"><div><div class="code"><div class="code-form "><div class="CodeMirror-static cm-s-default" data-lang="text/x-c++src"><div class="CodeMirror-code"><div class="CodeMirror-line"><div class="CodeMirror-linenumber">1</div><pre><span class="cm-variable-3">void</span> <span class="cm-def">Circle::display</span>()</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">2</div><pre>{</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">3</div><pre>   <span class="cm-variable">Form::display</span>();</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">4</div><pre>}</pre></div></div></div></div><pre class="code-raw noIndex " style="display:none;">void Circle::display()
+{
+   Form::display();
+}</pre></div></div></div><div class="rBk "><p><code class="txt_code_is ">Output&nbsp;:</code> </p></div><div class="rBk listing"><div><div class="code"><div class="code-form "><div class="CodeMirror-static cm-s-default" data-lang="text/x-c++src"><div class="CodeMirror-code"><div class="CodeMirror-line"><div class="CodeMirror-linenumber">1</div><pre><span class="cm-variable">I</span><span class="cm-string">'m a form !</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">2</div><pre><span class="cm-variable">I</span><span class="cm-string">'m a form !</span></pre></div></div></div></div><pre class="code-raw noIndex " style="display:none;">I'm a form !
+I'm a form !</pre></div></div></div></div></div><div class="iBk info"><div class="iBk_co "><div class="rBk "><p>But an object of type A can't call the methods of the subclass B.</p></div><div class="rBk listing"><div><div class="code"><div class="code-form "><div class="CodeMirror-static cm-s-default" data-lang="text/x-c++src"><div class="CodeMirror-code"><div class="CodeMirror-line"><div class="CodeMirror-linenumber">1</div><pre><span class="cm-meta">#include &quot;point2D.hpp&quot;</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">2</div><pre><span class="cm-meta">#include &quot;circle.hpp&quot;</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">3</div><pre><span class="cm-meta">#include &lt;iostream&gt;</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">4</div><pre></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">5</div><pre><span class="cm-variable-3">int</span> <span class="cm-def">main</span>()</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">6</div><pre>{</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">7</div><pre>    <span class="cm-comment">//Form creation</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">8</div><pre>    <span class="cm-variable">Form</span> <span class="cm-variable">f</span>;</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">9</div><pre>    <span class="cm-variable">f</span>.<span class="cm-variable">display</span>();</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">10</div><pre></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">11</div><pre>    <span class="cm-comment">//Circle creation</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">12</div><pre>    <span class="cm-variable">Circle</span> <span class="cm-variable">c</span>(<span class="cm-variable">Point2D</span>(<span class="cm-number">0</span>,<span class="cm-number">0</span>),<span class="cm-number">1.0</span>);</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">13</div><pre>    <span class="cm-variable">c</span>.<span class="cm-variable">display</span>();</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">14</div><pre></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">15</div><pre>    <span class="cm-variable">std::cout</span> <span class="cm-operator">&lt;&lt;</span> <span class="cm-string">&quot;radius : &quot;</span> <span class="cm-operator">&lt;&lt;</span> <span class="cm-variable">f</span>.<span class="cm-variable">getRadius</span>() <span class="cm-operator">&lt;&lt;</span> <span class="cm-variable">std::endl</span>;</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">16</div><pre>}</pre></div></div></div></div><pre class="code-raw noIndex " style="display:none;">#include &quot;point2D.hpp&quot;
+#include &quot;circle.hpp&quot;
+#include &lt;iostream&gt;
+
+int main()
+{
+    //Form creation
+    Form f;
+    f.display();
+
+    //Circle creation
+    Circle c(Point2D(0,0),1.0);
+    c.display();
+
+    std::cout &lt;&lt; &quot;radius : &quot; &lt;&lt; f.getRadius() &lt;&lt; std::endl;
+}</pre></div></div></div><div class="rBk "><p><strong class="txt_emp_is ">The last line produce an error&nbsp;during compilation ! A form is not a circle&nbsp;!</strong></p></div></div></div></div></section></div></div><div id="navigation" tabindex="-1"><hr class="hidden"><nav class="pageTurner" role="navigation"><ul><li><a rel="prev" href="polymorphism_3.html" target="_self" class="btnNav prev" title="Previous (Inheritance in C++)"><span>Previous</span></a></li><li><a rel="next" href="polymorphism_10.html" target="_self" class="btnNav next" title="Next (Constructor and destructor calling)"><span>Next</span></a></li></ul></nav></div></div><div id="toolbox"><nav id="menu" class="pageSelector" role="navigation" tabindex="-1" aria-label="main menu"><hr class="hidden"><ul class="mnu static" data-totalPages="16"><li class="sel_no anc_no type_l  dpt_0 obj"><div class="lbl type_l" id="polymorphism_1.html"><a href="polymorphism_1.html" target="_self" class="item"><span>Objectives</span></a></div></li><li class="sel_no anc_no type_b  type_b_c dpt_0 ueDiv"><div class="lbl type_b" id="polymorphism_2.html"><a href="polymorphism_2.html" target="_self" class="item"><span>Class and object&nbsp;: Reminders</span></a></div></li><li class="sel_no anc_yes type_b  dpt_0 ueDiv"><div class="lbl type_b" id="polymorphism_3.html"><a href="polymorphism_3.html" target="_self" class="item" type="up"><span>Inheritance in C++</span></a></div><ul class="sub mnu_open"><li class="sel_yes anc_no type_l  dpt_1 expUc"><div class="lbl type_l" id="polymorphism_9.html"><span class="item"><span>Inheritance concept</span></span></div></li><li class="sel_no anc_no type_l  dpt_1 expUc"><div class="lbl type_l" id="polymorphism_10.html"><a href="polymorphism_10.html" target="_self" class="item"><span>Constructor and destructor calling</span></a></div></li><li class="sel_no anc_no type_l  dpt_1 expUc"><div class="lbl type_l" id="polymorphism_11.html"><a href="polymorphism_11.html" target="_self" class="item"><span>Multiple inheritance</span></a></div></li><li class="sel_no anc_no type_l  dpt_1 expUc"><div class="lbl type_l" id="polymorphism_12.html"><a href="polymorphism_12.html" target="_self" class="item"><span>Upcasting and Downcasting</span></a></div></li></ul></li><li class="sel_no anc_no type_b  type_b_c dpt_0 ueDiv"><div class="lbl type_b" id="polymorphism_4.html"><a href="polymorphism_4.html" target="_self" class="item"><span>Polymorphism in C++</span></a></div></li><li class="sel_no anc_no type_l  dpt_0 practUc"><div class="lbl type_l" id="polymorphism_5.html"><a href="polymorphism_5.html" target="_self" class="item"><span>Quiz: The class Square</span></a></div></li><li class="sel_no anc_no type_l  dpt_0 practUc"><div class="lbl type_l" id="polymorphism_6.html"><a href="polymorphism_6.html" target="_self" class="item"><span>Quiz: Crazy robots</span></a></div></li></ul></nav><div id="tools" tabindex="-1"><hr class="hidden"><nav class="headingSelector" role="navigation"><ul class="mnu"><li class="anc_no home" data-position="uncle"><div class="lbl"><a href="polymorphism.html" target="_self" class="item" type="index" title="Module homepage"><span>Homepage</span></a></div></li><li class="anc_yes module" data-position="ancestor"><div class="lbl"><span class="item"><span>Module</span></span></div></li><li class="anc_no tools" data-position="uncle"><div class="lbl"><a href="plan.html" target="_self" class="item" title="Module transversal tools"><span>Tools</span></a></div></li></ul></nav></div></div></main><footer id="footer" role="contentinfo" tabindex="-1"><hr class="hidden"><a id="linkSp" target="_blank" href="https://www.scenari.org" title="Created with Scenari (new window)"><span><img alt="Created with Scenari (new window)" src="../skin/img/tpl/scBtn.png"></span></a></footer></div>
+  <script type="text/JavaScript" src="../skin/js/skin.js"></script>
+  <script type="text/javascript">tplMgr.init();scCodeMgr.init();scMediaMgr.init("ide:content/chi:div/chi:section/des:.mediaPlayer",{processYoutubeUrls :true});scImgMgr.init();outMgr.init();</script>
+ </body>
+</html>

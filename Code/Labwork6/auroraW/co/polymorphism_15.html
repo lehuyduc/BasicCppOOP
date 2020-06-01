@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta http-equiv="x-ua-compatible" content="IE=EDGE">
+  <title>Pure virtual method [Polymorphism in C++ language]</title>
+  <meta charset="UTF-8">
+  <meta name="generator" content="SCENARI 4.2.106 / Opale 3.7.000">
+  <meta name="revision" content="2018-11-26 07:03">
+  <link rel="start" href="polymorphism.html" title="Polymorphism in C++ language">
+  <meta name="author" content="Emmanuelle Darles ">
+  <meta name="keywords" content>
+  <meta name="date" content>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="../lib-md/w_scImgMgr/scImgMgr.css">
+  <link rel="stylesheet" type="text/css" href="../lib-md/w_scCodeMgr/scCodeMgr.css">
+  <script type="text/JavaScript">
+/*0*/ var scServices = {id:"joxyuesn"};
+/*1*/ window.scLoadParams = {destUri:"/co/polymorphism_15.html", pathToRoot:"../"};
+</script>
+  <script type="text/JavaScript" src="../lib-sc/scCoLib.js"></script>
+  <script type="text/JavaScript" src="../lib-sc/scSiLib.js"></script>
+  <script type="text/JavaScript" src="../lib-sc/scTiLib.js"></script>
+  <script type="text/JavaScript" src="../lib-sc/scPaLib.js"></script>
+  <script type="text/JavaScript" src="../lib-sc/scMapMgr.js"></script>
+  <script type="text/JavaScript" src="../lib-sc/scTooltipMgr.js"></script>
+  <script type="text/JavaScript" src="../lib-sc/scDynUiMgr.js"></script>
+  <script type="text/JavaScript" src="../lib-md/s_assmnt.js"></script>
+  <script type="text/JavaScript" src="../lib-sc/scDragMgr.js"></script>
+  <script type="text/JavaScript" src="../lib-sc/scAssmntMgr.js"></script>
+  <script type="text/JavaScript" src="../lib-md/w_mathjax/mathjaxMgr.js"></script>
+  <script type="text/JavaScript" src="../lib-md/s_scSearch/scSearch.js"></script>
+  <script type="text/JavaScript" src="../lib-md/w_tplMgr/tplMgr.js"></script>
+  <script type="text/JavaScript" src="../lib-md/w_scCodeMgr/scCodeMgr.js"></script>
+  <script type="text/JavaScript" src="../lib-md/w_searchMgr/searchMgr.js"></script>
+  <script type="text/JavaScript" src="../lib-md/w_scMediaMgr/scMediaMgr.js"></script>
+  <script type="text/JavaScript" src="../lib-md/w_scImgMgr/scImgMgr.js"></script>
+  <script type="text/JavaScript" src="../lib-md/w_outMgr/outMgr.js"></script>
+  <script type="text/JavaScript">
+
+/*0*/ try{if(window.opener && window.opener.scServices && window.opener.scServices.id == scServices.id) scServices = window.opener.scServices; else if(window.parent && window.parent.scServices && window.parent.scServices.id == scServices.id) scServices = window.parent.scServices;}catch(e){}
+scCodeMgr.registerCode("des:div.code");
+
+scImgMgr.registerAdaptedImage("ide:content/des:img");
+
+scImgMgr.registerGallery("des:div.galFra");
+
+scImgMgr.registerSvg("des:svg");
+scImgMgr.registerZoom("des:a.svgZoom",{type:"svg",svgMax:1,toolbar:1,titlePath:"par:/nsi:/des:span.capTi"});
+
+scImgMgr.registerZoom("des:a.imgZoom",{toolbar:1,mag:1,titlePath:"par:/nsi:/des:span.capTi"});
+
+</script>
+  <link type="text/css" rel="stylesheet" href="../skin/css/main.css" media="all">
+  <link type="text/css" rel="stylesheet" href="../skin/css/skin.css" media="all">
+  <link type="text/css" rel="stylesheet" href="../skin/css/print.css" media="print">
+  <script type="text/JavaScript">
+outMgr.declareOutline("polymorphism.txt");
+	</script> </head>
+ <body class="default module expUc">
+  <div id="root"><header id="header" role="banner"><h1><span>Polymorphism in C++ language</span></h1><nav role="navigation"><ul id="accessibility"><li class="waiContent"><a href="#content"><span>content</span></a></li><li class="waiMenu"><a href="#menu"><span>menu</span></a></li><li class="waiNav"><a href="#navigation"><span>navigation</span></a></li><li class="waiTools"><a href="#tools"><span>tools</span></a></li></ul></nav></header><main id="main" role="main"><div id="document"><div id="content" tabindex="-1"><div class="scroller"><hr class="hidden"><section class="hBk article expUc"><h2 class="hBk_ti"><span>Pure virtual method</span></h2><div class="hBk_co "><div class="iBk info"><div class="iBk_co "><div class="rBk "><p>Remember... At the top of a hierarchy, it is not always possible to give a general definition of some methods that are compatible with all subclasses. </p></div></div></div><div class="example pBk"><h3 class="example_ti pBk_ti"><span><i class="type"><span>Example</span></i><span class="hidden"> : </span><span class="title"></span></span></h3><div class="example_co pBk_co"><div class="rBk "><p>For example, the body of method area() in the class Form hasn't any sense&nbsp;! Why return 0.0&nbsp;? </p></div></div></div><div class="def pBk"><h3 class="def_ti pBk_ti"><span><i class="type"><span>Definition</span></i><span class="hidden"> : </span><span class="title"></span></span></h3><div class="def_co pBk_co"><div class="rBk "><p>A pure virtual method makes it mandatory to define this method in the subclasses.</p><p>This method is declared in the superclass but it has no body in the superclass.</p><p>The body of this method (implementation) is defined in subclasses.</p></div></div></div><div class="example pBk"><h3 class="example_ti pBk_ti"><span><i class="type"><span>Example</span></i><span class="hidden"> : </span><span class="title">The Form class with a display pure virtual method</span></span></h3><div class="example_co pBk_co"><div class="rBk listing"><div><div class="code"><div class="code-form "><div class="CodeMirror-static cm-s-default" data-lang="text/x-c++src"><div class="CodeMirror-code"><div class="CodeMirror-line"><div class="CodeMirror-linenumber">1</div><pre><span class="cm-meta">#ifndef FORM_</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">2</div><pre><span class="cm-meta">#define FORM_</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">3</div><pre></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">4</div><pre><span class="cm-keyword">class</span> <span class="cm-def">Form</span> </pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">5</div><pre>{</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">6</div><pre>   <span class="cm-keyword">public</span> :</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">7</div><pre></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">8</div><pre>     <span class="cm-comment">// Constructors</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">9</div><pre>     <span class="cm-variable">Form</span>();</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">10</div><pre></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">11</div><pre>     <span class="cm-comment">// Destructor</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">12</div><pre>     <span class="cm-variable">~Form</span>();</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">13</div><pre></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">14</div><pre>     <span class="cm-keyword">virtual</span> <span class="cm-variable-3">void</span> <span class="cm-variable">display</span>();</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">15</div><pre></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">16</div><pre>     <span class="cm-keyword">virtual</span> <span class="cm-variable-3">float</span> <span class="cm-variable">area</span>() <span class="cm-operator">=</span> <span class="cm-number">0</span>;</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">17</div><pre></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">18</div><pre>};</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">19</div><pre><span class="cm-meta">#endif</span></pre></div></div></div></div><pre class="code-raw noIndex " style="display:none;">#ifndef FORM_
+#define FORM_
+
+class Form 
+{
+   public :
+
+     // Constructors
+     Form();
+
+     // Destructor
+     ~Form();
+
+     virtual void display();
+
+     virtual float area() = 0;
+
+};
+#endif</pre></div></div></div><div class="rBk "><p>The method area() is a pure virtual method. She has no body in the super-class and must be overriden in subclasses. </p></div></div></div><div class="example pBk"><h3 class="example_ti pBk_ti"><span><i class="type"><span>Example</span></i><span class="hidden"> : </span><span class="title">The Circle class</span></span></h3><div class="example_co pBk_co"><div class="rBk "><p>For subclasses, no changes&nbsp;! Virtual methods are overriden.</p></div></div></div><div class="example pBk"><h3 class="example_ti pBk_ti"><span><i class="type"><span>Example</span></i><span class="hidden"> : </span><span class="title">The main program&nbsp;:</span></span></h3><div class="example_co pBk_co"><div class="rBk listing"><div><div class="code"><div class="code-form "><div class="CodeMirror-static cm-s-default" data-lang="text/x-c++src"><div class="CodeMirror-code"><div class="CodeMirror-line"><div class="CodeMirror-linenumber">1</div><pre><span class="cm-meta">#include &quot;circle.hpp&quot;</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">2</div><pre><span class="cm-meta">#include &quot;rectangle.hpp&quot;</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">3</div><pre><span class="cm-meta">#include &lt;vector&gt;</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">4</div><pre><span class="cm-meta">#include &lt;iostream&gt;</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">5</div><pre></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">6</div><pre><span class="cm-variable-3">int</span> <span class="cm-def">main</span>()</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">7</div><pre>{</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">8</div><pre>   <span class="cm-variable">std::vector</span><span class="cm-operator">&lt;</span><span class="cm-variable">Form</span><span class="cm-operator">*&gt;</span> <span class="cm-variable">forms</span>;</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">9</div><pre>   <span class="cm-variable">Rectangle</span> <span class="cm-operator">*</span><span class="cm-variable">R</span> <span class="cm-operator">=</span> <span class="cm-keyword">new</span> <span class="cm-variable">Rectangle</span>(<span class="cm-variable">Point2D</span>(<span class="cm-operator">-</span><span class="cm-number">1</span>,<span class="cm-operator">-</span><span class="cm-number">1</span>),<span class="cm-variable">Point2D</span>(<span class="cm-number">1</span>,<span class="cm-number">1</span>));</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">10</div><pre>   <span class="cm-variable">Circle</span> <span class="cm-operator">*</span><span class="cm-variable">C</span> <span class="cm-operator">=</span> <span class="cm-keyword">new</span> <span class="cm-variable">Circle</span>(<span class="cm-variable">Point2D</span>(<span class="cm-number">0</span>,<span class="cm-number">0</span>),<span class="cm-number">1</span>);</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">11</div><pre>   </pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">12</div><pre>   <span class="cm-variable">forms</span>.<span class="cm-variable">push_back</span>(<span class="cm-variable">R</span>);</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">13</div><pre>   <span class="cm-variable">forms</span>.<span class="cm-variable">push_back</span>(<span class="cm-variable">C</span>);</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">14</div><pre></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">15</div><pre>   <span class="cm-keyword">for</span>(<span class="cm-variable-3">unsigned</span> <span class="cm-variable-3">int</span> <span class="cm-variable">i</span><span class="cm-operator">=</span><span class="cm-number">0</span>;<span class="cm-variable">i</span><span class="cm-operator">&lt;</span><span class="cm-variable">forms</span>.<span class="cm-variable">size</span>();<span class="cm-variable">i</span><span class="cm-operator">++</span>){</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">16</div><pre>       <span class="cm-variable">forms</span>[<span class="cm-variable">i</span>]<span class="cm-operator">-&gt;</span><span class="cm-variable">display</span>();</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">17</div><pre>       <span class="cm-variable">std::cout</span> <span class="cm-operator">&lt;&lt;</span> <span class="cm-string">&quot;Area = &quot;</span> <span class="cm-operator">&lt;&lt;</span> <span class="cm-variable">forms</span>[<span class="cm-variable">i</span>]<span class="cm-operator">-&gt;</span><span class="cm-variable">area</span>() <span class="cm-operator">&lt;&lt;</span> <span class="cm-variable">std::endl</span>;</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">18</div><pre>   }</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">19</div><pre>}</pre></div></div></div></div><pre class="code-raw noIndex " style="display:none;">#include &quot;circle.hpp&quot;
+#include &quot;rectangle.hpp&quot;
+#include &lt;vector&gt;
+#include &lt;iostream&gt;
+
+int main()
+{
+   std::vector&lt;Form*&gt; forms;
+   Rectangle *R = new Rectangle(Point2D(-1,-1),Point2D(1,1));
+   Circle *C = new Circle(Point2D(0,0),1);
+   
+   forms.push_back(R);
+   forms.push_back(C);
+
+   for(unsigned int i=0;i&lt;forms.size();i++){
+       forms[i]-&gt;display();
+       std::cout &lt;&lt; &quot;Area = &quot; &lt;&lt; forms[i]-&gt;area() &lt;&lt; std::endl;
+   }
+}</pre></div></div></div><div class="rBk "><p>Output :</p></div><div class="rBk listing"><div><div class="code"><div class="code-form "><div class="CodeMirror-static cm-s-default" data-lang="text/x-c++src"><div class="CodeMirror-code"><div class="CodeMirror-line"><div class="CodeMirror-linenumber">1</div><pre><span class="cm-variable">I</span><span class="cm-string">'m a rectangle !</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">2</div><pre><span class="cm-variable">I</span><span class="cm-string">'m defined by two points : x = -1 y = -1</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">3</div><pre><span class="cm-variable">x</span> <span class="cm-operator">=</span> <span class="cm-number">1</span> <span class="cm-variable">y</span> <span class="cm-operator">=</span> <span class="cm-number">1</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">4</div><pre><span class="cm-variable">Area</span> <span class="cm-operator">=</span> <span class="cm-number">4</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">5</div><pre><span class="cm-variable">I</span><span class="cm-string">'m a circle !</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">6</div><pre><span class="cm-variable">My</span> <span class="cm-variable">center</span> <span class="cm-variable">is</span> <span class="cm-variable">x</span> <span class="cm-operator">=</span> <span class="cm-number">0</span> <span class="cm-variable">y</span> <span class="cm-operator">=</span> <span class="cm-number">0</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">7</div><pre><span class="cm-variable">My</span> <span class="cm-variable">radius</span> <span class="cm-variable">is</span> <span class="cm-number">1</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">8</div><pre><span class="cm-variable">Area</span> <span class="cm-operator">=</span> <span class="cm-number">3.14159</span></pre></div></div></div></div><pre class="code-raw noIndex " style="display:none;">I'm a rectangle !
+I'm defined by two points : x = -1 y = -1
+x = 1 y = 1
+Area = 4
+I'm a circle !
+My center is x = 0 y = 0
+My radius is 1
+Area = 3.14159</pre></div></div></div></div></div></div></section></div></div><div id="navigation" tabindex="-1"><hr class="hidden"><nav class="pageTurner" role="navigation"><ul><li><a rel="prev" href="polymorphism_14.html" target="_self" class="btnNav prev" title="Previous (Virtual function)"><span>Previous</span></a></li><li><a rel="next" href="polymorphism_16.html" target="_self" class="btnNav next" title="Next (Abstract class and Concrete class)"><span>Next</span></a></li></ul></nav></div></div><div id="toolbox"><nav id="menu" class="pageSelector" role="navigation" tabindex="-1" aria-label="main menu"><hr class="hidden"><ul class="mnu static" data-totalPages="16"><li class="sel_no anc_no type_l  dpt_0 obj"><div class="lbl type_l" id="polymorphism_1.html"><a href="polymorphism_1.html" target="_self" class="item"><span>Objectives</span></a></div></li><li class="sel_no anc_no type_b  type_b_c dpt_0 ueDiv"><div class="lbl type_b" id="polymorphism_2.html"><a href="polymorphism_2.html" target="_self" class="item"><span>Class and object&nbsp;: Reminders</span></a></div></li><li class="sel_no anc_no type_b  type_b_c dpt_0 ueDiv"><div class="lbl type_b" id="polymorphism_3.html"><a href="polymorphism_3.html" target="_self" class="item"><span>Inheritance in C++</span></a></div></li><li class="sel_no anc_yes type_b  dpt_0 ueDiv"><div class="lbl type_b" id="polymorphism_4.html"><a href="polymorphism_4.html" target="_self" class="item" type="up"><span>Polymorphism in C++</span></a></div><ul class="sub mnu_open"><li class="sel_no anc_no type_l  dpt_1 expUc"><div class="lbl type_l" id="polymorphism_13.html"><a href="polymorphism_13.html" target="_self" class="item"><span>Polymorphism&nbsp;: what is it&nbsp;?</span></a></div></li><li class="sel_no anc_no type_l  dpt_1 expUc"><div class="lbl type_l" id="polymorphism_14.html"><a href="polymorphism_14.html" target="_self" class="item"><span>Virtual function</span></a></div></li><li class="sel_yes anc_no type_l  dpt_1 expUc"><div class="lbl type_l" id="polymorphism_15.html"><span class="item"><span>Pure virtual method</span></span></div></li><li class="sel_no anc_no type_l  dpt_1 expUc"><div class="lbl type_l" id="polymorphism_16.html"><a href="polymorphism_16.html" target="_self" class="item"><span>Abstract class and Concrete class</span></a></div></li></ul></li><li class="sel_no anc_no type_l  dpt_0 practUc"><div class="lbl type_l" id="polymorphism_5.html"><a href="polymorphism_5.html" target="_self" class="item"><span>Quiz: The class Square</span></a></div></li><li class="sel_no anc_no type_l  dpt_0 practUc"><div class="lbl type_l" id="polymorphism_6.html"><a href="polymorphism_6.html" target="_self" class="item"><span>Quiz: Crazy robots</span></a></div></li></ul></nav><div id="tools" tabindex="-1"><hr class="hidden"><nav class="headingSelector" role="navigation"><ul class="mnu"><li class="anc_no home" data-position="uncle"><div class="lbl"><a href="polymorphism.html" target="_self" class="item" type="index" title="Module homepage"><span>Homepage</span></a></div></li><li class="anc_yes module" data-position="ancestor"><div class="lbl"><span class="item"><span>Module</span></span></div></li><li class="anc_no tools" data-position="uncle"><div class="lbl"><a href="plan.html" target="_self" class="item" title="Module transversal tools"><span>Tools</span></a></div></li></ul></nav></div></div></main><footer id="footer" role="contentinfo" tabindex="-1"><hr class="hidden"><a id="linkSp" target="_blank" href="https://www.scenari.org" title="Created with Scenari (new window)"><span><img alt="Created with Scenari (new window)" src="../skin/img/tpl/scBtn.png"></span></a></footer></div>
+  <script type="text/JavaScript" src="../skin/js/skin.js"></script>
+  <script type="text/javascript">tplMgr.init();scCodeMgr.init();scMediaMgr.init("ide:content/chi:div/chi:section/des:.mediaPlayer",{processYoutubeUrls :true});scImgMgr.init();outMgr.init();</script>
+ </body>
+</html>

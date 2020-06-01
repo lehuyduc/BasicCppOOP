@@ -1,0 +1,56 @@
+# depslib dependency file v1.0
+1574519205 source:e:\master1\slide_usth\mi1.03 - oop\code\labwork6\forms\circle.cpp
+	"circle.hpp"
+	<iostream>
+	<math.h>
+
+1541492936 e:\master1\slide_usth\mi1.03 - oop\code\labwork6\forms\circle.hpp
+	"form.hpp"
+	"point2D.hpp"
+
+1541490092 e:\master1\slide_usth\mi1.03 - oop\code\labwork6\forms\form.hpp
+
+1540866226 e:\master1\slide_usth\mi1.03 - oop\code\labwork6\forms\point2d.hpp
+
+1541490080 source:e:\master1\slide_usth\mi1.03 - oop\code\labwork6\forms\form.cpp
+	"form.hpp"
+
+1540866378 source:e:\master1\slide_usth\mi1.03 - oop\code\labwork6\forms\point2d.cpp
+	"point2D.hpp"
+	<iostream>
+
+1541492948 source:e:\master1\slide_usth\mi1.03 - oop\code\labwork6\forms\rectangle.cpp
+	"rectangle.hpp"
+	<math.h>
+	<iostream>
+
+1541490110 e:\master1\slide_usth\mi1.03 - oop\code\labwork6\forms\rectangle.hpp
+	"form.hpp"
+	"point2D.hpp"
+
+1574521599 source:e:\master1\slide_usth\mi1.03 - oop\code\labwork6\forms\square.cpp
+	"square.hpp"
+	<math.h>
+	<iostream>
+
+1574520354 e:\master1\slide_usth\mi1.03 - oop\code\labwork6\forms\square.hpp
+	"form.hpp"
+	"point2D.hpp"
+
+1574521677 source:e:\master1\slide_usth\mi1.03 - oop\code\labwork6\forms\triangle.cpp
+	"triangle.hpp"
+	<math.h>
+	<iostream>
+
+1574521686 e:\master1\slide_usth\mi1.03 - oop\code\labwork6\forms\triangle.hpp
+	"form.hpp"
+	"point2D.hpp"
+
+1574523738 source:e:\master1\slide_usth\mi1.03 - oop\code\labwork6\forms\main.cpp
+	"circle.hpp"
+	"rectangle.hpp"
+	"square.hpp"
+	"triangle.hpp"
+	<vector>
+	<iostream>
+

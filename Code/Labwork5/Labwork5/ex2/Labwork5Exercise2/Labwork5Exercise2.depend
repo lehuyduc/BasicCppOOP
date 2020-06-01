@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1576216813 source:e:\master1\slide_usth\mi1.03 - oop\code\labwork5\labwork5\ex2\main.cpp
+	<iostream>
+	"List.hpp"
+
+1576217333 e:\master1\slide_usth\mi1.03 - oop\code\labwork5\labwork5\ex2\list.hpp
+	<cstdlib>
+	<iostream>
+
+1576216283 source:e:\master1\slide_usth\mi1.03 - oop\code\labwork5\labwork5\ex2\list.cpp
+	"List.hpp"
+	<iostream>
+	<vector>
+

@@ -1,0 +1,44 @@
+# depslib dependency file v1.0
+1574861069 source:e:\master1\slide_usth\mi1.03 - oop\code\project-td2-nocolor\project-td2-nocolor\main.cpp
+	<iostream>
+	<time.h>
+	"GenericPoint2D.hpp"
+	"GenericCell.hpp"
+	"GenericCrazyRobot.hpp"
+	"GenericRandomMaze.hpp"
+
+1574775157 e:\master1\slide_usth\mi1.03 - oop\code\project-td2-nocolor\project-td2-nocolor\genericpoint2d.hpp
+	<iostream>
+	<ostream>
+
+1574824933 e:\master1\slide_usth\mi1.03 - oop\code\project-td2-nocolor\project-td2-nocolor\genericcell.hpp
+	<iostream>
+	"GenericPoint2D.hpp"
+
+1574860543 e:\master1\slide_usth\mi1.03 - oop\code\project-td2-nocolor\project-td2-nocolor\genericcrazyrobot.hpp
+	<iostream>
+	"GenericRobot.hpp"
+	"random"
+
+1574860596 e:\master1\slide_usth\mi1.03 - oop\code\project-td2-nocolor\project-td2-nocolor\genericrobot.hpp
+	<iostream>
+	"GenericPoint2D.hpp"
+	"GenericMaze.hpp"
+	<vector>
+
+1574860577 e:\master1\slide_usth\mi1.03 - oop\code\project-td2-nocolor\project-td2-nocolor\genericmaze.hpp
+	<iostream>
+	"GenericCell.hpp"
+	<vector>
+
+1574825412 e:\master1\slide_usth\mi1.03 - oop\code\project-td2-nocolor\project-td2-nocolor\genericrandommaze.hpp
+	<iostream>
+	"GenericMaze.hpp"
+	"Random.hpp"
+
+1574698048 e:\master1\slide_usth\mi1.03 - oop\code\project-td2-nocolor\project-td2-nocolor\random.hpp
+	<iostream>
+
+1574765302 source:e:\master1\slide_usth\mi1.03 - oop\code\project-td2-nocolor\project-td2-nocolor\random.cpp
+	"Random.hpp"
+

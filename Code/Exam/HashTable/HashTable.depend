@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1576321169 source:e:\master1\slide_usth\mi1.03 - oop\code\exam\hashtable\main.cpp
+	<iostream>
+	"hashtable.hpp"
+
+1576321191 e:\master1\slide_usth\mi1.03 - oop\code\exam\hashtable\hashtable.hpp
+	<iostream>
+	<stdlib.h>
+	<string>
+	<string.h>
+

@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1576298997 source:e:\master1\slide_usth\mi1.03 - oop\code\exam\list\main.cpp
+	<iostream>
+	"List.hpp"
+	<stdio.h>
+	<string.h>
+
+1576249814 e:\master1\slide_usth\mi1.03 - oop\code\exam\list\list.hpp
+	<iostream>
+
+1576226541 e:\master1\slide_usth\mi1.03 - oop\code\exam\list\listexception.hpp
+	<iostream>
+

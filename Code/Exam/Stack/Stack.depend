@@ -1,0 +1,25 @@
+# depslib dependency file v1.0
+1576301807 source:e:\master1\slide_usth\mi1.03 - oop\code\exam\stack\main.cpp
+	<iostream>
+	<cstdio>
+	<cstring>
+	"stack.hpp"
+	"stackInt.hpp"
+	"stackTemplate.hpp"
+
+1576294178 e:\master1\slide_usth\mi1.03 - oop\code\exam\stack\stack.hpp
+	<iostream>
+	<cstdlib>
+
+1576256528 source:e:\master1\slide_usth\mi1.03 - oop\code\exam\stack\realloc.cpp
+	<stdio.h>
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+
+1576301853 e:\master1\slide_usth\mi1.03 - oop\code\exam\stack\stackint.hpp
+	"stack.hpp"
+
+1576293558 e:\master1\slide_usth\mi1.03 - oop\code\exam\stack\stacktemplate.hpp
+	<iostream>
+

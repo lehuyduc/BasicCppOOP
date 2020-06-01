@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Project2018-LeHuyDuc" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/Project2018-LeHuyDuc" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/Project2018-LeHuyDuc" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="Console.h" />
+		<Unit filename="CrazyRobot.cpp" />
+		<Unit filename="CrazyRobot.hpp" />
+		<Unit filename="DownRobot.cpp" />
+		<Unit filename="DownRobot.hpp" />
+		<Unit filename="JumpingRobot.cpp" />
+		<Unit filename="JumpingRobot.hpp" />
+		<Unit filename="LeftRobot.cpp" />
+		<Unit filename="LeftRobot.hpp" />
+		<Unit filename="Maze.cpp" />
+		<Unit filename="Maze.hpp" />
+		<Unit filename="Point.cpp" />
+		<Unit filename="Point.hpp" />
+		<Unit filename="Random.cpp" />
+		<Unit filename="RandomMaze.cpp" />
+		<Unit filename="RandomMaze.hpp" />
+		<Unit filename="RightRobot.cpp" />
+		<Unit filename="RightRobot.hpp" />
+		<Unit filename="Robot.cpp" />
+		<Unit filename="Robot.hpp" />
+		<Unit filename="SmartRobot.cpp" />
+		<Unit filename="SmartRobot.hpp" />
+		<Unit filename="SuperSmartRobot.cpp" />
+		<Unit filename="SuperSmartRobot.hpp" />
+		<Unit filename="UpRobot.cpp" />
+		<Unit filename="UpRobot.hpp" />
+		<Unit filename="VerySmartRobot.cpp" />
+		<Unit filename="VerySmartRobot.hpp" />
+		<Unit filename="main.cpp" />
+		<Unit filename="scoreTree.hpp" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1576298301 source:e:\master1\slide_usth\mi1.03 - oop\code\exam\queue\main.cpp
+	<iostream>
+	"queue.hpp"
+
+1576298289 e:\master1\slide_usth\mi1.03 - oop\code\exam\queue\queue.hpp
+	<iostream>
+	<cstdio>
+	<cstdlib>
+

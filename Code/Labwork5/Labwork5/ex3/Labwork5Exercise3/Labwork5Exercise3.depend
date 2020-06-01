@@ -1,0 +1,27 @@
+# depslib dependency file v1.0
+1574431052 source:e:\master1\slide_usth\mi1.03 - oop\code\labwork5\labwork5\ex3\list.cpp
+	"List.hpp"
+	<iostream>
+	<vector>
+
+1574471482 e:\master1\slide_usth\mi1.03 - oop\code\labwork5\labwork5\ex3\list.hpp
+	<cstdlib>
+	<iostream>
+	"Point.hpp"
+
+1574481740 source:e:\master1\slide_usth\mi1.03 - oop\code\labwork5\labwork5\ex3\main.cpp
+	<iostream>
+	"PointList.hpp"
+	<random>
+
+1574439449 e:\master1\slide_usth\mi1.03 - oop\code\labwork5\labwork5\ex3\pointlist.hpp
+	"Point.hpp"
+	"List.hpp"
+
+1574432056 e:\master1\slide_usth\mi1.03 - oop\code\labwork5\labwork5\ex3\point.hpp
+	<iostream>
+	<cstdio>
+
+1480055750 source:e:\master1\slide_usth\mi1.03 - oop\code\labwork5\labwork5\ex3\pointlist.cpp
+	"PointList.hpp"
+

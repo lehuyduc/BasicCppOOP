@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Labwork7Exercise" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/Labwork7Exercise" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/Labwork7Exercise" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="ExceptionForm.cpp" />
+		<Unit filename="ExceptionForm.hpp" />
+		<Unit filename="circle.cpp" />
+		<Unit filename="circle.hpp" />
+		<Unit filename="form.cpp" />
+		<Unit filename="form.hpp" />
+		<Unit filename="main.cpp" />
+		<Unit filename="point2D.cpp" />
+		<Unit filename="point2D.hpp" />
+		<Unit filename="rectangle.cpp" />
+		<Unit filename="rectangle.hpp" />
+		<Unit filename="square.cpp" />
+		<Unit filename="square.hpp" />
+		<Unit filename="triangle.cpp" />
+		<Unit filename="triangle.hpp" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

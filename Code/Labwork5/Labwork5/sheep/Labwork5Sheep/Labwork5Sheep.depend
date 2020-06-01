@@ -1,0 +1,41 @@
+# depslib dependency file v1.0
+1574505747 source:e:\master1\slide_usth\mi1.03 - oop\code\labwork5\labwork5\sheep\sheep.cpp
+	<iostream>
+	"Drawing.hpp"
+	"Rectangle.hpp"
+	"Circle.hpp"
+	"Diamond.hpp"
+	"Ellipse.hpp"
+
+1574480641 e:\master1\slide_usth\mi1.03 - oop\code\labwork5\labwork5\sheep\drawing.hpp
+	"Graphic.hpp"
+
+1574505314 e:\master1\slide_usth\mi1.03 - oop\code\labwork5\labwork5\sheep\graphic.hpp
+
+1511500952 e:\master1\slide_usth\mi1.03 - oop\code\labwork5\labwork5\sheep\rectangle.hpp
+	"Graphic.hpp"
+
+1574477763 e:\master1\slide_usth\mi1.03 - oop\code\labwork5\labwork5\sheep\circle.hpp
+	<cmath>
+	"Graphic.hpp"
+	"Point.hpp"
+
+1574473633 e:\master1\slide_usth\mi1.03 - oop\code\labwork5\labwork5\sheep\point.hpp
+	<iostream>
+	<cstdio>
+
+1574505679 e:\master1\slide_usth\mi1.03 - oop\code\labwork5\labwork5\sheep\diamond.hpp
+	"Graphic.hpp"
+	"Point.hpp"
+
+1574511075 e:\master1\slide_usth\mi1.03 - oop\code\labwork5\labwork5\sheep\ellipse.hpp
+	"Graphic.hpp"
+
+1574474595 source:e:\master1\slide_usth\mi1.03 - oop\code\labwork5\labwork5\sheep\backup_sheep.cpp
+	<iostream>
+	"Drawing.hpp"
+	"Rectangle.hpp"
+	"Circle.hpp"
+	"Diamond.hpp"
+	"Ellipse.hpp"
+

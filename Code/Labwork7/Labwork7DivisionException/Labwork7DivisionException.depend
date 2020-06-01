@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1574524343 source:e:\master1\slide_usth\mi1.03 - oop\code\labwork7\labwork7divisionexception\main.cpp
+	<iostream>
+	"DivisionException.hpp"
+
+1574524056 e:\master1\slide_usth\mi1.03 - oop\code\labwork7\labwork7divisionexception\divisionexception.hpp
+	<iostream>
+	<exception>
+
+1574524312 source:e:\master1\slide_usth\mi1.03 - oop\code\labwork7\labwork7divisionexception\divisionexception.cpp
+	"DivisionException.hpp"
+

@@ -1,0 +1,69 @@
+# depslib dependency file v1.0
+1574526049 source:e:\master1\slide_usth\mi1.03 - oop\code\labwork7\labwork7exercise\circle.cpp
+	"circle.hpp"
+	"ExceptionForm.hpp"
+	<iostream>
+	<math.h>
+
+1541492936 e:\master1\slide_usth\mi1.03 - oop\code\labwork7\labwork7exercise\circle.hpp
+	"form.hpp"
+	"point2D.hpp"
+
+1541490092 e:\master1\slide_usth\mi1.03 - oop\code\labwork7\labwork7exercise\form.hpp
+
+1574655110 e:\master1\slide_usth\mi1.03 - oop\code\labwork7\labwork7exercise\point2d.hpp
+
+1541490080 source:e:\master1\slide_usth\mi1.03 - oop\code\labwork7\labwork7exercise\form.cpp
+	"form.hpp"
+
+1574655119 source:e:\master1\slide_usth\mi1.03 - oop\code\labwork7\labwork7exercise\point2d.cpp
+	"point2D.hpp"
+	<iostream>
+
+1574655145 source:e:\master1\slide_usth\mi1.03 - oop\code\labwork7\labwork7exercise\rectangle.cpp
+	"rectangle.hpp"
+	<math.h>
+	<iostream>
+	"ExceptionForm.hpp"
+
+1541490110 e:\master1\slide_usth\mi1.03 - oop\code\labwork7\labwork7exercise\rectangle.hpp
+	"form.hpp"
+	"point2D.hpp"
+
+1574526060 source:e:\master1\slide_usth\mi1.03 - oop\code\labwork7\labwork7exercise\square.cpp
+	"square.hpp"
+	<math.h>
+	<iostream>
+	"ExceptionForm.hpp"
+
+1574520354 e:\master1\slide_usth\mi1.03 - oop\code\labwork7\labwork7exercise\square.hpp
+	"form.hpp"
+	"point2D.hpp"
+
+1574600601 source:e:\master1\slide_usth\mi1.03 - oop\code\labwork7\labwork7exercise\triangle.cpp
+	"triangle.hpp"
+	<math.h>
+	<iostream>
+	"ExceptionForm.hpp"
+
+1574521686 e:\master1\slide_usth\mi1.03 - oop\code\labwork7\labwork7exercise\triangle.hpp
+	"form.hpp"
+	"point2D.hpp"
+
+1574656917 source:e:\master1\slide_usth\mi1.03 - oop\code\labwork7\labwork7exercise\main.cpp
+	"circle.hpp"
+	"rectangle.hpp"
+	"square.hpp"
+	"triangle.hpp"
+	"ExceptionForm.hpp"
+	<vector>
+	<iostream>
+
+1576202179 e:\master1\slide_usth\mi1.03 - oop\code\labwork7\labwork7exercise\exceptionform.hpp
+	<iostream>
+	<exception>
+
+1576202196 source:e:\master1\slide_usth\mi1.03 - oop\code\labwork7\labwork7exercise\exceptionform.cpp
+	<iostream>
+	"ExceptionForm.hpp"
+

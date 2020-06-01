@@ -1,0 +1,236 @@
+Labwork 3
+
+- const int * p: 
+	* + const int
+- int * const p:
+	const + int*
+
+
+- Static functions only need to have the "static" keyword in .h files. Do not put static in .cpp file. 
+Because in .cpp file, "static" means: "this function only work inside this file".
+
+- In codeblock, put files in the base project folder (folder that contain bin/obj folders). It is where the project is cd.
+
+- int A::f() const prevents this function to change the non-static object that calls it
+
+- Idem: like, for example, such as, the same
+
+- Private constructor when:
+	+ Use abstract class (for inheritance)
+	+ For class with other public constructors (for example, ban Point() {} constructor)
+	+ Design pattern singleton + factory
+
+- Mutable keyword: mutable keywords can be modified by const functions, and can be modified inside a const variable
+-------------------
+Labwork 4
+A {
+private: int x
+	friend class B;
+}
+-> B can use all private methods/data of A
+
+- Overloading operator:
+	Point operator + (Point&) const: usage: a+b, maybe not the same as b+a
+	friend Point operator + (Point&, Point&) const: usage: a+b = b+a, but need to be implemented outside the class
+	https://www.learncpp.com/cpp-tutorial/92-overloading-the-arithmetic-operators-using-friend-functions/
+
+- When to use friend operator : https://stackoverflow.com/questions/6255825/what-operators-should-be-declared-as-friends
+
+- Private overloading: you can overload "=" to be private if you don't want assignment using "="
+
+- Member function: functions that belong to a class that do not have "friend" keyword
+
+- Operator in class:
+	- For member function: must have the containing class as the argument. For binary operator, second argument can be anything
+	- Independent function: usually friend functions. Doesn't necessarily need an argument with type of containing class 
+
+- Overloading cast operator: https://www.learncpp.com/cpp-tutorial/910-overloading-typecasts/
+
+
+- Operator ++ (pre) : unary.  Example: Index& operator++() {...}
+
+- Operator ++ (post): binary. Example: Index operator++(int nothing __attribute__((unused))) {...}
+	The post++ operator has an argument. That argument is always unused.
+	See lecture 4 page 15.
+
+- __attribute((unused)): Normally, the compiler warns if a variable is declared but is never referenced. This attribute informs the compiler that you expect a variable to be unused and tells it not to issue a warning if it is not used.
+
+
+- Copy operator: class T{ T(const T&); } T::T(const T&) { implementation here; }
+- Assignment operator: Vector& operator=(const Vector& v) { ... return *this;}
+
+- Canonical form: has constructor, copier, destructor, assignment operator.
+
+- lvalue = a thing that point to something. A container
+- rvalue: a thing that doesn't point to anything. The content of a container
+
+- Overload operator []: int& operator[] (int idex) {return arr[idx];} // We use & because we need to return a lvalue
+	C++ forbid [] as friend function because C++ doesn't want friend functions that can modify object
+	Only constant methods are usable with const instance, but make operator [] constant prevents it from being a lvalue
+	-> Solution: second [] operator, constant, return by value
+
+- Copy operator should not contain memory clean up
+
+- Destructor doesn't get called on function exit: if an object is returned from a function, that object doesn't get destructed if the following condition eixsts:
+	has constructor
+	has copy constructor
+	https://stackoverflow.com/questions/58966142/why-doesnt-the-class-instance-used-as-the-return-value-in-a-function-call-its-d?noredirect=1#comment104187264_58966142
+	https://stackoverflow.com/questions/12953127/what-are-copy-elision-and-return-value-optimization
+
+- Operator [] const: creating another [] operator, adding const before {}, and change from return by reference (double&) to by value (double)
+
+// Ignore this: - Operator [] const: if the returned value is a object created from constructor, that construct must takes only const parameter.
+
+
+- Uninitialized constant members in classes: all constant member in constructors must use initialization. The error refer to const unsigned m_width.
+We use this format to initialize:
+		class MatrixRow {
+    			const unsigned m_width;
+    			double*m_v;
+    			MatrixRow();
+  		public:
+   			 MatrixRow(const unsigned row, Matrix&m) :
+       				m_width(m.m_width), m_v(m.m_v+(row*m.m_width)) {}
+	+ We can't assign value to const attribute, but we can initialize them. They become const after initialization. This is the only way to do constructor for const
+
+- binding of reference to a value of type drops qualifiers
+
+
+- Cast operator:
+	+ Must always be a member function
+	+ Do not write the type of return value: 
+		class Point {
+			int m_x, m_y;		
+		public:
+			operator int() {return m_x;} // cast operator. no explicit return value
+		}
+
+- Cast explicit/implicit: you should never use implicit cast for constructor. Always use explicit keyword on constructor
+
+- Casting is only used by compiler when necessary. When there is a usable constructor or assignment operator, casting will not be used.
+
+- Casting one class to another class: constructor cast is basically a constructor that use another class as parameter
+
+- If a function is inside a class inside a header file, it's automatically inline. If a function is declared inside a class but implemented outside, by default it's not inline.
+
+- Implicit casting should only be from small class to larger class (cast without losing information). For example, casting int to Point is fine, but the opposite is not. 
+
+- const at the end of a member function means it promise it doesn't change any attribute of the class that it's inside. Friend non-class function never have const, becaues they don't belong to any class.
+
+
+- Overloading cout <<: 
+	//.hpp:   friend std::ostream& operator<<(std::ostream&, const Vector&);
+	
+	//.cpp
+	std::ostream& operator<<(std::ostream&os, const Vector&v) {
+ 	 os<<"{ ";
+	  for(unsigned i=0; i<v.m_n; ++i) {
+	    os << v.m_v[i] << " ";
+	  }
+	  os<<"}";
+	  return os;
+}
+
+-----------------------
+Inheritance - Lecture 5
+- 3 types of Inheritance: public, protected, private: https://stackoverflow.com/questions/860339/difference-between-private-public-and-protected-inheritance
+
+- p.Point::print() to call Point's print() instead of ColoredPoint's print()
+
+- B extends A. Overloading functions inside B will completely replace A's functions. Need to use: B b; b.A::print() to access A's function.
+
+- Constructor is called from high to low, destructor called from low to high. Use initialization list in constructor is the correct solution
+
+- A pointer of parent class when assigned to a child class will still use functions of the parent class.
+	Point* ap; ColoredPoint* bp;
+	ap->print(); outputs (x,y) instead of (x,y,color)
+
+- Operator + in base class will return the base class
+	class ColoredPoint a,b {operator + }
+	class ColoredPoint c; // c needs to be Point to compile
+	c = a + b -> fail, because a+b returns Point; and ColoredPoint doesn't have operator assignment
+
+
+- LAB WORK 5 IMPORTANT NOTES: NEVER DELETE STUFF IN Iterator CLASS, THOSE DATA DON'T BELONG TO THE OPERATOR
+
+
+
+- Ambiguous Base Classes: happen because diamond inheritance without virtual in the middle layer. https://hacksoflife.blogspot.com/2007/03/c-objects-part-6-ambiguous-base-classes.html
+
+
+- Using child's function through a parent class pointer:
+	Animal *a = new Dog();
+	a->sound();
+	// if Animal::sound() is not virtual, this will call Animal::sound()
+	// if virtual Animal::sound(), this will call Dog::sound()
+
+
+
+-----------------------
+Lecture 6
+- When overriding, function return datatype must be the same
+
+- Getter must always be const
+
+- Virtual function must be either pure virtual, or have an implementation
+
+- class has virtual functions and accessible non-virtual destructor: if B extends A, and A has virtual function, then the destructor should also be virtual.
+	A *a = new B()
+	if destructor called, then it will use A's destructor, and leaks all information of class B.
+
+- NOTICE: IN TEMPLATE, USE T*,int*,double* AND NOT *T, *int, *double.
+
+- Destructor in virtual classes: Destructors are called automatically in the reverse order of construction. (Base classes last). Do not call base class destructors.
+	https://stackoverflow.com/questions/677620/do-i-need-to-explicitly-call-the-base-virtual-destructor
+
+- override keyword can only be used if the base class has keyword virtual
+
+- Virtual destructor: Virtual destructors are useful when you might potentially delete an instance of a derived class through a pointer to base class:
+	https://stackoverflow.com/questions/461203/when-to-use-virtual-destructors
+----------------------
+Lecture 7
+- exception: catch (exception e) {cout << e.what();} to print any exception
+
+- If a function has const/throw() in declaration, it must have const/throw() in implementation
+
+- In a constructor exception, base constructor gets called after try and before {. Example: try : Form() { ... }
+     Circle::Circle(Point2D center, float radius)
+   	try : Form()
+	{
+    	    if (radius <= 0)
+     	   	throw ExceptionForm("Circle error: radius <= 0");
+   	    this->center = center;
+   	    this->radius = radius;
+	}
+   	catch (std:;exception e) {
+        	cout << e.what();
+    	}
+
+- NEVER EVER THROW INSIDE A DESTRUCTOR
+
+
+---------------------------------
+Lecture 8 
+
+- TEMPLATE FUNCTION/CLASS CAN ONLY BE IMPLEMENTED IN .H FILES
+
+- When inheriting, the base class template type must also be used
+	template<class T>
+	class GenericCrazyRobot : public GenericRobot<T> {
+
+- protected attribute was not declared in this scope: https://isocpp.org/wiki/faq/templates#nondependent-name-lookup-members	
+	template<typename T>
+class B {
+public:
+  void f() { }  // Member of class B<T>
+};
+template<typename T>
+class D : public B<T> {
+public:
+  void g()
+  {
+    f();  // Bad (even though some compilers erroneously (temporarily?) accept it)
+  }
+};
+
+	Solution: use this->f() or B<T>::f()

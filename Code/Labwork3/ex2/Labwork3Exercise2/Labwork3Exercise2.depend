@@ -1,0 +1,17 @@
+# depslib dependency file v1.0
+1574246234 source:e:\master1\slide_usth\mi1.03 - oop\code\labwork3\ex2\main.cpp
+	<iostream>
+	"Complex.hpp"
+
+1574240604 e:\master1\slide_usth\mi1.03 - oop\code\labwork3\ex2\complex.hpp
+	<string>
+
+1574246980 source:e:\master1\slide_usth\mi1.03 - oop\code\labwork3\ex2\complex.cpp
+	<cmath>
+	<sstream>
+	"Complex.hpp"
+	<iostream>
+	"Complex_Internal.hpp"
+
+1574240679 e:\master1\slide_usth\mi1.03 - oop\code\labwork3\ex2\complex_internal.hpp
+

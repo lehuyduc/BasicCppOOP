@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta http-equiv="x-ua-compatible" content="IE=EDGE">
+  <title>Multiple inheritance [Polymorphism in C++ language]</title>
+  <meta charset="UTF-8">
+  <meta name="generator" content="SCENARI 4.2.106 / Opale 3.7.000">
+  <meta name="revision" content="2018-11-26 07:03">
+  <link rel="start" href="polymorphism.html" title="Polymorphism in C++ language">
+  <meta name="author" content="Emmanuelle Darles ">
+  <meta name="keywords" content>
+  <meta name="date" content>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="../lib-md/w_scImgMgr/scImgMgr.css">
+  <link rel="stylesheet" type="text/css" href="../lib-md/w_scCodeMgr/scCodeMgr.css">
+  <script type="text/JavaScript">
+/*0*/ var scServices = {id:"joxyuesn"};
+/*1*/ window.scLoadParams = {destUri:"/co/polymorphism_11.html", pathToRoot:"../"};
+</script>
+  <script type="text/JavaScript" src="../lib-sc/scCoLib.js"></script>
+  <script type="text/JavaScript" src="../lib-sc/scSiLib.js"></script>
+  <script type="text/JavaScript" src="../lib-sc/scTiLib.js"></script>
+  <script type="text/JavaScript" src="../lib-sc/scPaLib.js"></script>
+  <script type="text/JavaScript" src="../lib-sc/scMapMgr.js"></script>
+  <script type="text/JavaScript" src="../lib-sc/scTooltipMgr.js"></script>
+  <script type="text/JavaScript" src="../lib-sc/scDynUiMgr.js"></script>
+  <script type="text/JavaScript" src="../lib-md/s_assmnt.js"></script>
+  <script type="text/JavaScript" src="../lib-sc/scDragMgr.js"></script>
+  <script type="text/JavaScript" src="../lib-sc/scAssmntMgr.js"></script>
+  <script type="text/JavaScript" src="../lib-md/w_mathjax/mathjaxMgr.js"></script>
+  <script type="text/JavaScript" src="../lib-md/s_scSearch/scSearch.js"></script>
+  <script type="text/JavaScript" src="../lib-md/w_tplMgr/tplMgr.js"></script>
+  <script type="text/JavaScript" src="../lib-md/w_scCodeMgr/scCodeMgr.js"></script>
+  <script type="text/JavaScript" src="../lib-md/w_searchMgr/searchMgr.js"></script>
+  <script type="text/JavaScript" src="../lib-md/w_scMediaMgr/scMediaMgr.js"></script>
+  <script type="text/JavaScript" src="../lib-md/w_scImgMgr/scImgMgr.js"></script>
+  <script type="text/JavaScript" src="../lib-md/w_outMgr/outMgr.js"></script>
+  <script type="text/JavaScript">
+
+/*0*/ try{if(window.opener && window.opener.scServices && window.opener.scServices.id == scServices.id) scServices = window.opener.scServices; else if(window.parent && window.parent.scServices && window.parent.scServices.id == scServices.id) scServices = window.parent.scServices;}catch(e){}
+scCodeMgr.registerCode("des:div.code");
+
+scImgMgr.registerAdaptedImage("ide:content/des:img");
+
+scImgMgr.registerGallery("des:div.galFra");
+
+scImgMgr.registerSvg("des:svg");
+scImgMgr.registerZoom("des:a.svgZoom",{type:"svg",svgMax:1,toolbar:1,titlePath:"par:/nsi:/des:span.capTi"});
+
+scImgMgr.registerZoom("des:a.imgZoom",{toolbar:1,mag:1,titlePath:"par:/nsi:/des:span.capTi"});
+
+</script>
+  <link type="text/css" rel="stylesheet" href="../skin/css/main.css" media="all">
+  <link type="text/css" rel="stylesheet" href="../skin/css/skin.css" media="all">
+  <link type="text/css" rel="stylesheet" href="../skin/css/print.css" media="print">
+  <script type="text/JavaScript">
+outMgr.declareOutline("polymorphism.txt");
+	</script> </head>
+ <body class="default module expUc">
+  <div id="root"><header id="header" role="banner"><h1><span>Polymorphism in C++ language</span></h1><nav role="navigation"><ul id="accessibility"><li class="waiContent"><a href="#content"><span>content</span></a></li><li class="waiMenu"><a href="#menu"><span>menu</span></a></li><li class="waiNav"><a href="#navigation"><span>navigation</span></a></li><li class="waiTools"><a href="#tools"><span>tools</span></a></li></ul></nav></header><main id="main" role="main"><div id="document"><div id="content" tabindex="-1"><div class="scroller"><hr class="hidden"><section class="hBk article expUc"><h2 class="hBk_ti"><span>Multiple inheritance</span></h2><div class="hBk_co "><div class="def pBk"><h3 class="def_ti pBk_ti"><span><i class="type"><span>Definition</span></i><span class="hidden"> : </span><span class="title"></span></span></h3><div class="def_co pBk_co"><div class="rBk "><p>In multiple inheritance, a sub-class has multiple super-classes. The sub-class inherits all the properties of the super-classes.</p></div></div></div><div class="example pBk"><h3 class="example_ti pBk_ti"><span><i class="type"><span>Example</span></i><span class="hidden"> : </span><span class="title">Class Colored Form</span></span></h3><div class="example_co pBk_co"><div class="rBk res"><figure role="group" class="resInFlow png"><div class="resInFlow_co "><img src="../res/formColor.png" width="269" height="226" alt></div></figure></div><div class="rBk listing"><div><div class="code"><div class="code-form "><div class="CodeMirror-static cm-s-default" data-lang="text/x-c++src"><div class="CodeMirror-code"><div class="CodeMirror-line"><div class="CodeMirror-linenumber">1</div><pre><span class="cm-meta">#ifndef COLOR_</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">2</div><pre><span class="cm-meta">#define COLOR_</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">3</div><pre></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">4</div><pre><span class="cm-keyword">class</span> <span class="cm-def">Color</span> </pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">5</div><pre>{</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">6</div><pre>    <span class="cm-keyword">public</span> :</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">7</div><pre></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">8</div><pre>        <span class="cm-comment">//Constructors</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">9</div><pre>        <span class="cm-variable">Color</span>();</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">10</div><pre>        <span class="cm-variable">Color</span>(<span class="cm-variable-3">short</span> <span class="cm-variable">red</span> <span class="cm-operator">=</span> <span class="cm-number">0</span>, <span class="cm-variable-3">short</span> <span class="cm-variable">green</span> <span class="cm-operator">=</span> <span class="cm-number">0</span>, <span class="cm-variable-3">short</span> <span class="cm-variable">blue</span> <span class="cm-operator">=</span> <span class="cm-number">0</span>);</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">11</div><pre></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">12</div><pre>        <span class="cm-comment">//Destructor</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">13</div><pre>        <span class="cm-variable">~Color</span>();</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">14</div><pre></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">15</div><pre>        <span class="cm-comment">//Getters</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">16</div><pre>        <span class="cm-variable-3">short</span> <span class="cm-variable">getRed</span>() <span class="cm-keyword">const</span>;</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">17</div><pre>        <span class="cm-variable-3">short</span> <span class="cm-variable">getGreen</span>() <span class="cm-keyword">const</span>;</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">18</div><pre>        <span class="cm-variable-3">short</span> <span class="cm-variable">getBlue</span>() <span class="cm-keyword">const</span>;</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">19</div><pre></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">20</div><pre>        <span class="cm-comment">//Setters</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">21</div><pre>        <span class="cm-variable-3">void</span> <span class="cm-variable">setRed</span>(<span class="cm-variable-3">short</span> <span class="cm-variable">red</span>);</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">22</div><pre>        <span class="cm-variable-3">void</span> <span class="cm-variable">setGreen</span>(<span class="cm-variable-3">short</span> <span class="cm-variable">green</span>);</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">23</div><pre>        <span class="cm-variable-3">void</span> <span class="cm-variable">setBlue</span>(<span class="cm-variable-3">short</span> <span class="cm-variable">blue</span>);</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">24</div><pre></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">25</div><pre>        <span class="cm-variable-3">void</span> <span class="cm-variable">display</span>();</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">26</div><pre></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">27</div><pre>    <span class="cm-keyword">private</span> :</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">28</div><pre></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">29</div><pre>        <span class="cm-comment">//Attributes</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">30</div><pre>        <span class="cm-variable-3">short</span> <span class="cm-variable">red</span>, <span class="cm-variable">green</span>, <span class="cm-variable">blue</span>;</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">31</div><pre>};</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">32</div><pre><span class="cm-meta">#endif</span></pre></div></div></div></div><pre class="code-raw noIndex " style="display:none;">#ifndef COLOR_
+#define COLOR_
+
+class Color 
+{
+    public :
+
+        //Constructors
+        Color();
+        Color(short red = 0, short green = 0, short blue = 0);
+
+        //Destructor
+        ~Color();
+
+        //Getters
+        short getRed() const;
+        short getGreen() const;
+        short getBlue() const;
+
+        //Setters
+        void setRed(short red);
+        void setGreen(short green);
+        void setBlue(short blue);
+
+        void display();
+
+    private :
+
+        //Attributes
+        short red, green, blue;
+};
+#endif</pre></div></div></div><div class="rBk listing"><div><div class="code"><div class="code-form "><div class="CodeMirror-static cm-s-default" data-lang="text/x-c++src"><div class="CodeMirror-code"><div class="CodeMirror-line"><div class="CodeMirror-linenumber">1</div><pre><span class="cm-meta">#include &quot;color.hpp&quot;</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">2</div><pre><span class="cm-meta">#include &lt;iostream&gt;</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">3</div><pre></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">4</div><pre><span class="cm-def">Color::Color</span>(<span class="cm-variable-3">short</span> <span class="cm-variable">r</span>, <span class="cm-variable-3">short</span> <span class="cm-variable">g</span>, <span class="cm-variable-3">short</span> <span class="cm-variable">b</span>):<span class="cm-variable">red</span>(<span class="cm-variable">r</span>), <span class="cm-variable">green</span>(<span class="cm-variable">g</span>), <span class="cm-variable">blue</span>(<span class="cm-variable">b</span>)</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">5</div><pre>{</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">6</div><pre>}</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">7</div><pre><span class="cm-variable">Color::</span><span class="cm-def">~Color</span>()</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">8</div><pre>{</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">9</div><pre>}</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">10</div><pre><span class="cm-variable-3">short</span> <span class="cm-def">Color::getRed</span>() <span class="cm-keyword">const</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">11</div><pre>{</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">12</div><pre>    <span class="cm-keyword">return</span> <span class="cm-keyword">this</span><span class="cm-operator">-&gt;</span><span class="cm-variable">red</span>;</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">13</div><pre>}</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">14</div><pre><span class="cm-variable-3">short</span> <span class="cm-def">Color::getGreen</span>() <span class="cm-keyword">const</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">15</div><pre>{</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">16</div><pre>    <span class="cm-keyword">return</span> <span class="cm-keyword">this</span><span class="cm-operator">-&gt;</span><span class="cm-variable">green</span>;</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">17</div><pre>}</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">18</div><pre><span class="cm-variable-3">short</span> <span class="cm-def">Color::getBlue</span>() <span class="cm-keyword">const</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">19</div><pre>{</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">20</div><pre>    <span class="cm-keyword">return</span> <span class="cm-keyword">this</span><span class="cm-operator">-&gt;</span><span class="cm-variable">blue</span>;</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">21</div><pre>}</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">22</div><pre><span class="cm-variable-3">void</span> <span class="cm-def">Color::display</span>()</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">23</div><pre>{</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">24</div><pre>    <span class="cm-variable">std::cout</span> <span class="cm-operator">&lt;&lt;</span> <span class="cm-string">&quot;I'm a color !&quot;</span> <span class="cm-operator">&lt;&lt;</span> <span class="cm-variable">std::endl</span>;</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">25</div><pre>    <span class="cm-variable">std::cout</span> <span class="cm-operator">&lt;&lt;</span> <span class="cm-string">&quot;red: &quot;</span> <span class="cm-operator">&lt;&lt;</span> <span class="cm-keyword">this</span><span class="cm-operator">-&gt;</span><span class="cm-variable">red</span> <span class="cm-operator">&lt;&lt;</span> <span class="cm-string">&quot; green: &quot;</span> <span class="cm-operator">&lt;&lt;</span> <span class="cm-keyword">this</span><span class="cm-operator">-&gt;</span><span class="cm-variable">green</span> <span class="cm-operator">&lt;&lt;</span> <span class="cm-string">&quot; blue: &quot;</span> <span class="cm-operator">&lt;&lt;</span> <span class="cm-keyword">this</span><span class="cm-operator">-&gt;</span><span class="cm-variable">blue</span> <span class="cm-operator">&lt;&lt;</span> <span class="cm-variable">std::endl</span>;</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">26</div><pre>}</pre></div></div></div></div><pre class="code-raw noIndex " style="display:none;">#include &quot;color.hpp&quot;
+#include &lt;iostream&gt;
+
+Color::Color(short r, short g, short b):red(r), green(g), blue(b)
+{
+}
+Color::~Color()
+{
+}
+short Color::getRed() const
+{
+    return this-&gt;red;
+}
+short Color::getGreen() const
+{
+    return this-&gt;green;
+}
+short Color::getBlue() const
+{
+    return this-&gt;blue;
+}
+void Color::display()
+{
+    std::cout &lt;&lt; &quot;I'm a color !&quot; &lt;&lt; std::endl;
+    std::cout &lt;&lt; &quot;red: &quot; &lt;&lt; this-&gt;red &lt;&lt; &quot; green: &quot; &lt;&lt; this-&gt;green &lt;&lt; &quot; blue: &quot; &lt;&lt; this-&gt;blue &lt;&lt; std::endl;
+}</pre></div></div></div></div></div><div class="example pBk"><h3 class="example_ti pBk_ti"><span><i class="type"><span>Example</span></i><span class="hidden"> : </span><span class="title">Colored form</span></span></h3><div class="example_co pBk_co"><div class="rBk "><p>Consider a colored form class. This class inherits of two classes&nbsp;:</p><ul class="txt_il "><li class="txt_ili "><p>the Color class&nbsp;;</p></li></ul><ul class="txt_il "><li class="txt_ili "><p>and Form class.</p></li></ul></div><div class="rBk listing"><div><div class="code"><div class="code-form "><div class="CodeMirror-static cm-s-default" data-lang="text/x-c++src"><div class="CodeMirror-code"><div class="CodeMirror-line"><div class="CodeMirror-linenumber">1</div><pre><span class="cm-meta">#ifndef FORM_COLOR_</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">2</div><pre><span class="cm-meta">#define FORM_COLOR_</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">3</div><pre></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">4</div><pre><span class="cm-meta">#include &quot;form.hpp&quot;</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">5</div><pre><span class="cm-meta">#include &quot;color.hpp&quot;</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">6</div><pre></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">7</div><pre><span class="cm-keyword">class</span> <span class="cm-def">FormColor</span> : <span class="cm-keyword">public</span> <span class="cm-variable">Form</span>, <span class="cm-keyword">public</span> <span class="cm-variable">Color</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">8</div><pre>{</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">9</div><pre>    <span class="cm-keyword">public</span> :</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">10</div><pre></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">11</div><pre>        <span class="cm-comment">//Constructor</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">12</div><pre>        <span class="cm-variable">FormColor</span>(<span class="cm-variable-3">short</span> <span class="cm-variable">r</span>, <span class="cm-variable-3">short</span> <span class="cm-variable">g</span>, <span class="cm-variable-3">short</span> <span class="cm-variable">b</span>);</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">13</div><pre></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">14</div><pre>        <span class="cm-comment">//Destructor</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">15</div><pre>        <span class="cm-variable">~FormColor</span>();</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">16</div><pre>        </pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">17</div><pre>        <span class="cm-variable-3">void</span> <span class="cm-variable">display</span>();</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">18</div><pre>};</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">19</div><pre><span class="cm-meta">#endif</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">20</div><pre></pre></div></div></div></div><pre class="code-raw noIndex " style="display:none;">#ifndef FORM_COLOR_
+#define FORM_COLOR_
+
+#include &quot;form.hpp&quot;
+#include &quot;color.hpp&quot;
+
+class FormColor : public Form, public Color
+{
+    public :
+
+        //Constructor
+        FormColor(short r, short g, short b);
+
+        //Destructor
+        ~FormColor();
+        
+        void display();
+};
+#endif
+</pre></div></div></div><div class="rBk listing"><div><div class="code"><div class="code-form "><div class="CodeMirror-static cm-s-default" data-lang="text/x-c++src"><div class="CodeMirror-code"><div class="CodeMirror-line"><div class="CodeMirror-linenumber">1</div><pre><span class="cm-meta">#include &quot;formColor.hpp&quot;</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">2</div><pre></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">3</div><pre><span class="cm-def">FormColor::FormColor</span>(<span class="cm-variable-3">short</span> <span class="cm-variable">r</span>, <span class="cm-variable-3">short</span> <span class="cm-variable">g</span>, <span class="cm-variable-3">short</span> <span class="cm-variable">b</span>) : <span class="cm-variable">Form</span>() , <span class="cm-variable">Color</span>(<span class="cm-variable">r</span>,<span class="cm-variable">g</span>,<span class="cm-variable">b</span>)</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">4</div><pre>{</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">5</div><pre>}</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">6</div><pre><span class="cm-variable">FormColor::</span><span class="cm-def">~FormColor</span>()</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">7</div><pre>{</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">8</div><pre>}</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">9</div><pre><span class="cm-variable-3">void</span> <span class="cm-def">FormColor::display</span>()</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">10</div><pre>{</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">11</div><pre>    <span class="cm-variable">Form::display</span>();</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">12</div><pre>    <span class="cm-variable">Color::display</span>();</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">13</div><pre>}</pre></div></div></div></div><pre class="code-raw noIndex " style="display:none;">#include &quot;formColor.hpp&quot;
+
+FormColor::FormColor(short r, short g, short b) : Form() , Color(r,g,b)
+{
+}
+FormColor::~FormColor()
+{
+}
+void FormColor::display()
+{
+    Form::display();
+    Color::display();
+}</pre></div></div></div><div class="rBk listing"><div><div class="code"><div class="code-form "><div class="CodeMirror-static cm-s-default" data-lang="text/x-c++src"><div class="CodeMirror-code"><div class="CodeMirror-line"><div class="CodeMirror-linenumber">1</div><pre><span class="cm-meta">#include &quot;formColor.hpp&quot;</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">2</div><pre></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">3</div><pre><span class="cm-variable-3">int</span> <span class="cm-def">main</span>()</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">4</div><pre>{</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">5</div><pre>    <span class="cm-comment">//Colored form creation</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">6</div><pre>    <span class="cm-variable">FormColor</span> <span class="cm-variable">fc</span>(<span class="cm-number">10</span>,<span class="cm-number">10</span>,<span class="cm-number">10</span>);</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">7</div><pre>    <span class="cm-variable">fc</span>.<span class="cm-variable">display</span>();</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">8</div><pre>}</pre></div></div></div></div><pre class="code-raw noIndex " style="display:none;">#include &quot;formColor.hpp&quot;
+
+int main()
+{
+    //Colored form creation
+    FormColor fc(10,10,10);
+    fc.display();
+}</pre></div></div></div><div class="rBk "><p><code class="txt_code_is ">Output&nbsp;:</code></p></div><div class="rBk listing"><div><div class="code"><div class="code-form "><div class="CodeMirror-static cm-s-default" data-lang="text/x-c++src"><div class="CodeMirror-code"><div class="CodeMirror-line"><div class="CodeMirror-linenumber">1</div><pre><span class="cm-variable">I</span><span class="cm-string">'m a form !</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">2</div><pre><span class="cm-variable">I</span><span class="cm-string">'m a color !</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">3</div><pre><span class="cm-variable">red</span>: <span class="cm-number">10</span> <span class="cm-variable">green</span>: <span class="cm-number">10</span> <span class="cm-variable">blue</span>: <span class="cm-number">10</span></pre></div></div></div></div><pre class="code-raw noIndex " style="display:none;">I'm a form !
+I'm a color !
+red: 10 green: 10 blue: 10</pre></div></div></div></div></div></div></section></div></div><div id="navigation" tabindex="-1"><hr class="hidden"><nav class="pageTurner" role="navigation"><ul><li><a rel="prev" href="polymorphism_10.html" target="_self" class="btnNav prev" title="Previous (Constructor and destructor calling)"><span>Previous</span></a></li><li><a rel="next" href="polymorphism_12.html" target="_self" class="btnNav next" title="Next (Upcasting and Downcasting)"><span>Next</span></a></li></ul></nav></div></div><div id="toolbox"><nav id="menu" class="pageSelector" role="navigation" tabindex="-1" aria-label="main menu"><hr class="hidden"><ul class="mnu static" data-totalPages="16"><li class="sel_no anc_no type_l  dpt_0 obj"><div class="lbl type_l" id="polymorphism_1.html"><a href="polymorphism_1.html" target="_self" class="item"><span>Objectives</span></a></div></li><li class="sel_no anc_no type_b  type_b_c dpt_0 ueDiv"><div class="lbl type_b" id="polymorphism_2.html"><a href="polymorphism_2.html" target="_self" class="item"><span>Class and object&nbsp;: Reminders</span></a></div></li><li class="sel_no anc_yes type_b  dpt_0 ueDiv"><div class="lbl type_b" id="polymorphism_3.html"><a href="polymorphism_3.html" target="_self" class="item" type="up"><span>Inheritance in C++</span></a></div><ul class="sub mnu_open"><li class="sel_no anc_no type_l  dpt_1 expUc"><div class="lbl type_l" id="polymorphism_9.html"><a href="polymorphism_9.html" target="_self" class="item"><span>Inheritance concept</span></a></div></li><li class="sel_no anc_no type_l  dpt_1 expUc"><div class="lbl type_l" id="polymorphism_10.html"><a href="polymorphism_10.html" target="_self" class="item"><span>Constructor and destructor calling</span></a></div></li><li class="sel_yes anc_no type_l  dpt_1 expUc"><div class="lbl type_l" id="polymorphism_11.html"><span class="item"><span>Multiple inheritance</span></span></div></li><li class="sel_no anc_no type_l  dpt_1 expUc"><div class="lbl type_l" id="polymorphism_12.html"><a href="polymorphism_12.html" target="_self" class="item"><span>Upcasting and Downcasting</span></a></div></li></ul></li><li class="sel_no anc_no type_b  type_b_c dpt_0 ueDiv"><div class="lbl type_b" id="polymorphism_4.html"><a href="polymorphism_4.html" target="_self" class="item"><span>Polymorphism in C++</span></a></div></li><li class="sel_no anc_no type_l  dpt_0 practUc"><div class="lbl type_l" id="polymorphism_5.html"><a href="polymorphism_5.html" target="_self" class="item"><span>Quiz: The class Square</span></a></div></li><li class="sel_no anc_no type_l  dpt_0 practUc"><div class="lbl type_l" id="polymorphism_6.html"><a href="polymorphism_6.html" target="_self" class="item"><span>Quiz: Crazy robots</span></a></div></li></ul></nav><div id="tools" tabindex="-1"><hr class="hidden"><nav class="headingSelector" role="navigation"><ul class="mnu"><li class="anc_no home" data-position="uncle"><div class="lbl"><a href="polymorphism.html" target="_self" class="item" type="index" title="Module homepage"><span>Homepage</span></a></div></li><li class="anc_yes module" data-position="ancestor"><div class="lbl"><span class="item"><span>Module</span></span></div></li><li class="anc_no tools" data-position="uncle"><div class="lbl"><a href="plan.html" target="_self" class="item" title="Module transversal tools"><span>Tools</span></a></div></li></ul></nav></div></div></main><footer id="footer" role="contentinfo" tabindex="-1"><hr class="hidden"><a id="linkSp" target="_blank" href="https://www.scenari.org" title="Created with Scenari (new window)"><span><img alt="Created with Scenari (new window)" src="../skin/img/tpl/scBtn.png"></span></a></footer></div>
+  <script type="text/JavaScript" src="../skin/js/skin.js"></script>
+  <script type="text/javascript">tplMgr.init();scCodeMgr.init();scMediaMgr.init("ide:content/chi:div/chi:section/des:.mediaPlayer",{processYoutubeUrls :true});scImgMgr.init();outMgr.init();</script>
+ </body>
+</html>
