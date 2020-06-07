@@ -1,3 +1,0 @@
-- C++ want to limit preprocessor (#define) as much as possible
-
-- C++ doesn't allow illegal pointer conversion because SSE/AVX requires pointer type in an array to be the same.
